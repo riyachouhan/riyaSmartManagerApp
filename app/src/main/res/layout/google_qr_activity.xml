@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".activities.ReceivedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/text_card_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:paddingTop="@dimen/_25sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_horizontal"
+                android:text="To Scan the QR code use google authenticator
+app and enter the secret code"
+                android:textColor="@color/colorBlackText"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/secrate_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnCopyTransactionId"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_copy_24"
+                        android:gravity="top"
+                        android:padding="@dimen/_8sdp"
+                        android:text="Copy"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_horizontal"
+                android:text="OR"
+                android:textColor="@color/colorBlackText"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/ivQrCode"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_horizontal"
+                android:text="Please secure  this code\n
+If you loose your Google Authenticator Code, you\n
+wont't be able to access this account."
+                android:textColor="@color/colorBlackText"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etAuthview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/otpbackvieew"
+                android:hint="Enter google authenticator code"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:textColorHint="@color/colorSecondaryText"
+                android:padding="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnShareQrCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:background="@drawable/button_accent_round"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

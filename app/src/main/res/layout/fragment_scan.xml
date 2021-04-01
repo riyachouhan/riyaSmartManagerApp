@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/payUsingPHP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_card_bg"
+        android:layout_gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:src="@drawable/payusingphp"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorApp"
+            android:text="Pay Using PHP"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            style="@style/balancetextSize"
+             android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scanSamKoin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_card_bg"
+        android:layout_gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:src="@drawable/paysamkoin"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorApp"
+            android:text="Pay Using SAMK"
+            android:gravity="center"
+            style="@style/balancetextSize"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

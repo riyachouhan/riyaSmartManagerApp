@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:text="Transaction Details"
+            style="@style/homeheader"/>
+
+    <LinearLayout
+        android:id="@+id/sendrlayout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:text="Sender :"
+            style="@style/homeheader"
+            android:textColor="@color/black"
+           />
+
+        <TextView
+            android:gravity="top"
+            android:id="@+id/tvSenderAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:drawableEnd="@drawable/ic_copy_small"
+            android:drawableTint="@color/colorPrimary"
+            android:drawablePadding="@dimen/_5sdp"
+            android:textColor="@color/colorBlackText"
+            style="@style/MyCustomTabText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:id="@+id/receiverhint"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:text="Receiver :"
+             android:textColor="@color/black"
+            style="@style/homeheader" />
+
+        <TextView
+            android:gravity="top"
+            android:id="@+id/tvReceiverAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:drawableEnd="@drawable/ic_copy_small"
+            android:drawableTint="@color/colorPrimary"
+            android:drawablePadding="@dimen/_5sdp"
+            style="@style/MyCustomTabText"
+            android:textColor="@color/colorBlackText"
+             />
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/dark_gray"/>
+
+        <TextView
+            android:id="@+id/btnGoHome"
+            android:layout_marginTop="-10dp"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="OK"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            style="@style/homeheader" />
+
+</LinearLayout>

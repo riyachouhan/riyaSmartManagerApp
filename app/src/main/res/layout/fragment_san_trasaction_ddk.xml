@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:orientation="vertical"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/text_card_bg"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_9sdp">
+
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:weightSum="2"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/_28sdp"
+                            android:src="@drawable/ic_ddk"
+                            android:tint="@color/colorPrimary"
+                            android:layout_height="@dimen/_28sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:id="@+id/liduid_view"
+                            android:layout_marginTop="@dimen/_5ssp"
+                            android:gravity="center_vertical"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:layout_gravity="right"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/_28sdp"
+                            android:background="@drawable/sam_wallet_icon_new"
+                            android:layout_height="@dimen/_28sdp"/>
+
+                        <TextView
+                            android:id="@+id/samwallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5ssp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="0.00000"
+                            android:layout_marginRight="@dimen/_5ssp"
+                            android:gravity="center_vertical"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.warkiz.widget.IndicatorStayLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--your layout-->
+
+                    <com.warkiz.widget.IndicatorSeekBar
+                        app:isb_indicator_top_content_layout="@layout/seekbarrcoutn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/custom_indicator_by_java_code"
+                        app:isb_seek_smoothly="true"
+                        app:isb_ticks_count="5"
+                        app:isb_show_tick_marks_type="oval"
+                        app:isb_tick_marks_size="13sp"
+                        app:isb_track_background_color="@color/colorPrimary"
+                        app:isb_tick_texts_array="@array/tick_below_text_length_5"
+                        app:isb_tick_marks_drawable="@drawable/circle_gray"
+                        app:isb_show_tick_texts="true"
+                        app:isb_tick_texts_size="11sp"
+                        app:isb_thumb_size="20sp"
+                        app:isb_show_indicator="rounded_rectangle"
+                        app:isb_thumb_color="@color/colorPrimary"
+                        app:isb_indicator_color="@color/colorPrimary"
+                        app:isb_thumb_text_color="@color/white"
+                        app:isb_tick_texts_color="@color/colorPrimary"
+                        app:isb_indicator_text_color="@color/colorAccent"
+                        app:isb_indicator_text_size="18sp"
+                        app:isb_track_background_size="2dp"
+                        app:isb_track_progress_color="@color/colorPrimary"
+                        app:isb_track_progress_size="4dp"
+                        app:isb_only_thumb_draggable="false"/>
+
+                    <!--your layout-->
+                </com.warkiz.widget.IndicatorStayLayout>
+
+                <EditText
+                    android:id="@+id/etSamAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:paddingBottom="5dp"
+                    android:inputType="numberDecimal"
+                    android:hint="Enter Sam Points"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="14sp" />
+
+                <View
+                    android:background="@color/lightcolor"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <TextView
+                    android:id="@+id/etconversion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:paddingBottom="5dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="Conversion Ex-Market Usdt Conversion"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+
+                <View
+                    android:background="@color/lightcolor"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <TextView
+                    android:id="@+id/etDDKAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="DDK Amount"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:paddingBottom="5dp"                   android:textSize="14sp" />
+
+                <View
+                    android:background="@color/colorSecondaryText"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <TextView
+                    android:id="@+id/tvSelectDdkAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:gravity="left"
+                    android:hint="Select DDk Address"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:background="@color/colorSecondaryText"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Available DDK "
+                        android:layout_gravity="left"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tvAvailableDDK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_gravity="left"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvDDKsecrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:visibility="gone"
+                    android:textColor="@color/colorPrimary" />
+
+                <com.ncorti.slidetoact.SlideToActView
+                    android:id="@+id/slide_custom_icon"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/_220sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    app:slider_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    app:outer_color="#810B81"
+                    app:inner_color="@color/white"
+                    app:area_margin="1dp"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:text_size="14sp"
+                    app:slider_icon="@drawable/ic_slider_icon"
+                    app:text="Slide To Confirm"/>
+
+            </LinearLayout>
+
+          </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

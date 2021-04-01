@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBlackText" />
+
+    <LinearLayout
+        android:weightSum="5"
+        android:id="@+id/payout_walletview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlackText" />
+
+        <TextView
+            android:id="@+id/tvLevel"
+            android:textSize="7sp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/colorBlackText"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlackText" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:textSize="7sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Ricardo"
+            android:textColor="@color/colorBlackText"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlackText" />
+
+        <TextView
+            android:id="@+id/tvDaily5Per"
+            android:textSize="7sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="0.5% Daily"
+            android:textColor="@color/colorBlackText"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlackText" />
+
+        <TextView
+            android:id="@+id/tvTotalIn5Days"
+            android:textSize="7sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Total in (5) Days"
+            android:textColor="@color/colorBlackText"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlackText" />
+
+        <TextView
+            android:id="@+id/tvPerReward"
+            android:textSize="7sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="(%) Reward"
+            android:textColor="@color/colorBlackText"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlackText" />
+
+        <TextView
+            android:id="@+id/tvRewards"
+            android:textSize="7sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Reward"
+            android:background="@color/light_blue_500"
+            android:textColor="@color/colorBlackText"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlackText" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/subview"
+        android:visibility="gone"
+        android:background="@color/colorBlackText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/lytCollapse_sub"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBlackText" />
+
+        <LinearLayout
+            android:id="@+id/lytMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlackText" />
+
+            <TextView
+                android:id="@+id/tvSNO"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_2sdp"
+                android:paddingRight="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="S.NO"
+                android:textColor="@color/orange"
+                android:textSize="7sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlackText" />
+
+            <TextView
+                android:id="@+id/tvDDk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.5"
+                android:gravity="center"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_2sdp"
+                android:paddingRight="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="DDK"
+                android:textColor="@color/orange"
+                android:textSize="7sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlackText" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvAmtLend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_2sdp"
+                android:paddingRight="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="Amt Lend"
+                android:textColor="@color/orange"
+                android:textSize="7sp" />
+
+            <View
+                android:visibility="gone"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlackText" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvPayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_2sdp"
+                android:paddingRight="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="Payout"
+                android:textColor="@color/orange"
+                android:textSize="7sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlackText" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBlackText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_subchid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_below="@+id/recycler_view_subchid"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

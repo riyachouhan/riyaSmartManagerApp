@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lytCollapse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBlackText" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/mainsublevellayout"
+             android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:weightSum="4"
+                android:id="@+id/submenuview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorBlackText" />
+
+                <TextView
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
+                    android:textSize="7sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingLeft="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:text="1 Level"
+                    android:id="@+id/submenu_level_1_name"
+                    android:drawableStart="@drawable/ic_add_black"
+                    android:textColor="@color/orange"
+                    android:fontFamily="@font/montserrat_medium"
+                    />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorBlackText" />
+
+                <TextView
+                    android:layout_weight="1.2"
+                    android:layout_width="0dp"
+                    android:textSize="7sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingLeft="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:text="Name"
+                    android:textColor="@color/orange"
+                    android:fontFamily="@font/montserrat_medium"
+                    />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorBlackText" />
+
+                <TextView
+                    android:layout_weight="1.2"
+                    android:layout_width="0dp"
+                    android:textSize="7sp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingLeft="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:text="Country"
+                    android:textColor="@color/orange"
+                    android:fontFamily="@font/montserrat_medium"
+                    />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorBlackText" />
+
+                <TextView
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
+                    android:textSize="7sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingLeft="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:text="Amount"
+                    android:textColor="@color/orange"
+                    android:fontFamily="@font/montserrat_medium"
+                    />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorBlackText" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlackText" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/list_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvReferralPayout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_1"
+                    android:layout_below="@+id/rvReferralPayout_1"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/transparent"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlackText" />
+
+            <LinearLayout
+                    android:weightSum="4"
+                    android:id="@+id/submenuview_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="0.8"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="2 Level"
+                        android:id="@+id/submenu_level_2_name"
+                        android:drawableStart="@drawable/ic_add_black"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="1.2"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Name"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="1.2"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Country"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="0.8"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Amount"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+                </LinearLayout>
+
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlackText" />
+
+            <RelativeLayout
+                android:id="@+id/list_view_2"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvReferralPayout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_2"
+                    android:layout_below="@+id/rvReferralPayout_2"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/transparent"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlackText" />
+
+                <LinearLayout
+                    android:weightSum="4"
+                    android:id="@+id/submenuview_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="0.8"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="3 Level"
+                        android:id="@+id/submenu_level_3_name"
+                        android:drawableStart="@drawable/ic_add_black"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="1.2"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Name"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="1.2"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Country"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="0.8"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Amount"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+                </LinearLayout>
+
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlackText" />
+
+            <RelativeLayout
+                android:id="@+id/list_view_3"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvReferralPayout_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_3"
+                    android:layout_below="@+id/rvReferralPayout_3"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/transparent"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlackText" />
+
+                <LinearLayout
+                    android:weightSum="4"
+                    android:id="@+id/submenuview_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="0.8"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="4 Level"
+                        android:id="@+id/submenu_level_4_name"
+                        android:drawableStart="@drawable/ic_add_black"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="1.2"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Name"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="1.2"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Country"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="0.8"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Amount"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+                </LinearLayout>
+
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlackText" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/list_view_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvReferralPayout_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_4"
+                    android:layout_below="@+id/rvReferralPayout_4"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/transparent"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlackText" />
+
+                <LinearLayout
+                    android:weightSum="4"
+                    android:id="@+id/submenuview_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="0.8"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="5 Level"
+                        android:id="@+id/submenu_level_5_name"
+                        android:drawableStart="@drawable/ic_add_black"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="1.2"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Name"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="1.2"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Country"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_weight="0.8"
+                        android:layout_width="0dp"
+                        android:textSize="7sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingLeft="@dimen/_2sdp"
+                        android:paddingRight="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="Amount"
+                        android:textColor="@color/orange"
+                        android:fontFamily="@font/montserrat_medium"
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+                </LinearLayout>
+
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlackText" />
+
+            <RelativeLayout
+                android:id="@+id/list_view_5"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvReferralPayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_below="@+id/rvReferralPayout"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/transparent"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReferralChain"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNoRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="Record not Found."
+        android:visibility="gone"
+        android:textSize="22sp" />
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_18sdp"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:background="@drawable/send_money_bck"
+    android:paddingBottom="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/send_money_bck">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gcahlogo"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="25dp"
+            android:hint="Enter amount"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Maximum of PHP 50,000.00"
+            android:textColor="#361e72"
+            android:textSize="12dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:padding="5dp"
+            android:src="@drawable/gcahlogo"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="GCash No"
+            android:maxLength="30"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Max. of 30 characters"
+            android:textColor="#361e72"
+            android:textSize="12dp"
+            android:visibility="invisible"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:padding="5dp"
+            android:src="@drawable/gcahlogo"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/facebook_invite"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_accent_round"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Send Money"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <!---->

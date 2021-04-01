@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+        <LinearLayout
+            android:layout_above="@+id/bottomviewlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/text_card_bg"
+            >
+
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/pdfView"
+                android:layout_marginRight="-10dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomviewlayout"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/simpleCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="I accept terms &amp; conditions"
+            android:textColor="@color/colorPrimary"
+            android:checked="false"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            style="@style/MyCustomTabText_small"/>
+
+            <TextView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="Accept"
+                android:id="@+id/bottom_view"
+                android:background="@drawable/termandcondtionpurple"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                style="@style/homeheader" />
+
+    </LinearLayout>
+
+</RelativeLayout>

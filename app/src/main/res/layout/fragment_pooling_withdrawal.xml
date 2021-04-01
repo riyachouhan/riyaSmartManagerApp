@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lytTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/text_card_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/_3sdp">
+
+            <CheckBox
+                android:id="@+id/btnOnCredential"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="On Credential" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/text_card_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/_3sdp">
+
+            <CheckBox
+                android:id="@+id/btnManualEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Manual Entry" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnConfirmWithdrawal"
+        android:layout_below="@+id/lytTop"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCredential"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/text_card_bg"
+                android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                android:gravity="center"
+                android:hint="List of DDk Address on Credential"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/colorBlackText"
+                android:textColorHint="@color/colorBlackText"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/lytManual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter DDK Address : "
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorBlackText" />
+
+                    <EditText
+                        android:id="@+id/etDDKAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@null"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/tab_unSelect" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg_light"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="First Passphrase :"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorBlackText" />
+
+                    <EditText
+                        android:id="@+id/etFirstPassphrase"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:background="@null"
+                        android:textColor="@color/tab_unSelect" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Second Passphrase :"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorBlackText" />
+
+                    <EditText
+                        android:id="@+id/etSecondPassphrase"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_marginStart="10dp"
+                        android:background="@null"
+                        android:textColor="@color/tab_unSelect" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnGetLendList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_accent_round"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Get Lend Data"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lytBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Date Lend"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorBlackText"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:padding="5dp"
+                        android:text="No"
+                        android:textColor="@color/colorBlackText"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.6"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Payout Receiver"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/colorBlackText"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:padding="5dp"
+                        android:text="Amount USDT"
+                        android:textColor="@color/colorBlackText"
+                        android:textSize="@dimen/_8ssp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackText" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvWithdrawal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="3"
+                        android:gravity="end"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Total Selected:"
+                        android:textColor="@color/colorBlackText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:id="@+id/tvTotalSelected"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="0.0"
+                        android:textColor="@color/colorBlackText" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="3"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/btnInfoWithdrawal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:drawableStart="@drawable/ic_info"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="Cancellation Charge (5%):"
+                            android:textColor="@color/colorBlackText" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:id="@+id/tvWithdrawalCharge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="5dp"
+                        android:text="0.0"
+                        android:textColor="@color/colorBlackText" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="end"
+                        android:text="Payout Amount USDT:"
+                        android:textColor="@color/colorBlackText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:id="@+id/tvPayoutAmountUSD"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="0.0"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/colorBlackText" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="3"
+                        android:gravity="end"
+                        android:text="Day Conversion:"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/colorBlackText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:id="@+id/tvDayConversion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="0.0"
+                        android:textColor="@color/colorBlackText" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorBlackText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="3"
+                        android:gravity="end"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="DDK Payout Amount:"
+                        android:textColor="@color/colorBlackText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlackText" />
+
+                    <TextView
+                        android:id="@+id/tvDDKPayoutAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="0.0"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/colorBlackText" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDDKAddressDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/text_card_bg"
+                android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                android:gravity="center"
+                android:hint="DDK Address Destination"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/colorBlackText"
+                android:textColorHint="@color/colorBlackText"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/btnConfirmWithdrawal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_accent_round"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Confirm Cancellation"
+        android:textColor="@color/white" />
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:background="@drawable/text_card_bg"
+    android:id="@+id/viewclickdata"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/separteitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.6"
+            android:gravity="right">
+
+            <CheckBox
+                android:id="@+id/chbContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp" />
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="2.4"
+                android:layout_marginLeft="-10dp"
+                android:weightSum="2"
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.2"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:paddingRight="@dimen/_4sdp"
+                        android:id="@+id/tvAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:gravity="left"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlackText"
+                        android:textSize="11sp"
+                       />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvAmount"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:id="@+id/tvDate"
+                        android:singleLine="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/colorBlackText"
+                        android:textSize="9sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

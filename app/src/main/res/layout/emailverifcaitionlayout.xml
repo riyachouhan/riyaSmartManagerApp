@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/addressbill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:paddingBottom="@dimen/_25sdp"
+        android:paddingTop="@dimen/_25sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/billingview"
+            android:layout_width="@dimen/_75sdp"
+            android:background="@drawable/address_verification_icon"
+            android:layout_height="@dimen/_75sdp"/>
+
+        <TextView
+            android:layout_margin="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Upload proof of billing"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/submitview"
+            android:layout_width="@dimen/_155sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/button_accent_round"
+            android:gravity="center"
+            android:text="UPLOAD"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/submitimgbilling"
+            android:layout_width="@dimen/_155sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/button_accent_round"
+            android:gravity="center"
+            android:text="Submit"
+            android:visibility="gone"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/identity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+       android:visibility="gone"
+        android:paddingBottom="@dimen/_15sdp"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_75sdp"
+            android:src="@drawable/id_verification_icon"
+            android:layout_height="@dimen/_75sdp"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/verifcationicon"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Upload 2 type of government id"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Please upload 2 valid Government ID"
+            android:textColor="#747272"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/govermentid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Select Government ID"
+            android:background="@null"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:background="@color/colorPrimary"
+            android:layout_height="0.5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Upload Front Image (1)"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <ImageView
+                    android:id="@+id/img_first_front_pic"
+                    android:layout_width="@dimen/_80sdp"
+                    android:src="@drawable/front"
+                    android:layout_height="@dimen/_80sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Upload Back Image (1)"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <ImageView
+                    android:id="@+id/img_first_back_pic"
+                    android:layout_width="@dimen/_80sdp"
+                    android:src="@drawable/back"
+                    android:layout_height="@dimen/_80sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/govermentid2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Select Government ID"
+            android:background="@null"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:background="@color/colorPrimary"
+            android:layout_height="0.5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Upload Front Image (2)"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="@dimen/_1sdp"/>
+
+
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:src="@drawable/front"
+                    android:id="@+id/img_second_front_pic"
+                    android:layout_height="@dimen/_80sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Upload Back Image (2)"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="@dimen/_1sdp"/>
+
+
+                <ImageView
+                    android:id="@+id/img_second_back_pic"
+                    android:layout_width="@dimen/_80sdp"
+                    android:src="@drawable/back"
+                    android:layout_height="@dimen/_80sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/upload"
+            android:layout_width="@dimen/_155sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/button_accent_round"
+            android:gravity="center"
+            android:text="UPLOAD"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_25sdp"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="@dimen/_40sdp"
+            android:src="@drawable/video_icon"
+            android:layout_height="@dimen/_40sdp"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Instructions :"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/_25sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/timer_second_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Video should not be more than 10 seconds"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:id="@+id/firstview"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/_25sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/face_icindat"/>
+
+        <TextView
+            android:id="@+id/secondview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="You need to look left, right and center."
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Nextvideo"
+            android:layout_width="@dimen/_155sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:background="@drawable/button_accent_round"
+            android:gravity="center"
+            android:text="Next"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+           android:visibility="gone"
+            android:id="@+id/submitvideo"
+            android:layout_width="@dimen/_155sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:background="@drawable/button_accent_round"
+            android:gravity="center"
+            android:text="Submit"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Notes: Please do not close this windows until the verification is done."
+            android:textSize="12sp"
+            android:id="@+id/niteview"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorRed"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/fund_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_25sdp"
+        android:paddingTop="@dimen/_25sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_75sdp"
+            android:src="@drawable/fnd_icon"
+            android:layout_height="@dimen/_75sdp"/>
+
+        <TextView
+            android:layout_margin="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Enter sources of funds"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:drawableTint="@color/colorPrimary"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:id="@+id/etFundValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Select Funds Source (business)"
+            android:textColor="@color/colorBlackText"
+            android:textSize="@dimen/_12ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:background="@color/colorPrimary"
+            android:layout_height="0.5dp"/>
+
+        <TextView
+            android:id="@+id/btnGoHome"
+            android:layout_width="@dimen/_155sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:background="@drawable/button_accent_round"
+            android:gravity="center"
+            android:text="Submit"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

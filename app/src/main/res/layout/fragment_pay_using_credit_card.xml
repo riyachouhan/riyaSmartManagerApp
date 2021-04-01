@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btnGoBack"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:drawableStart="@drawable/ic_go_back"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTint="@color/colorApp"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="Go back"
+            android:textColor="@color/colorApp"
+            android:textSize="@dimen/_10ssp" />
+
+        <LinearLayout
+            android:id="@+id/lytCreditView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/text_card_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCardList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Card Number"
+                    android:textColor="@color/tab_unSelect"
+                    android:textSize="@dimen/_10ssp" />
+
+                <com.stripe.android.view.CardNumberEditText
+                    android:id="@+id/etCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:hint="xxxx xxxx xxxx xxxx"
+                    android:inputType="number"
+                    android:textColorHint="@color/colorBlackText"
+                    android:textSize="@dimen/_12ssp"
+                    android:maxLength="19" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Expiration Date"
+                            android:textColor="@color/tab_unSelect"
+                            android:textSize="@dimen/_10ssp"
+                            android:fontFamily="@font/montserrat_regular"/>
+
+                        <com.stripe.android.view.ExpiryDateEditText
+                            android:id="@+id/etExpiryDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:hint="MM/YY"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColorHint="@color/colorBlackText"
+                            android:inputType="number"
+                            android:maxLength="5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="CVC Number"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/tab_unSelect"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <com.ddkcommunity.utilies.CreditCardEditTextNew
+                            android:id="@+id/etCVCNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:hint="***"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColorHint="@color/colorBlackText"
+                            android:inputType="number"
+                            android:maxLength="3" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Card Holder Name"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/tab_unSelect"
+                    android:textSize="@dimen/_10ssp" />
+
+                <com.ddkcommunity.utilies.CreditCardEditTextNew
+                    android:id="@+id/etCardHolderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:hint="Name on card"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColorHint="@color/colorBlackText"
+                    android:inputType="text|textNoSuggestions"
+                    android:maxLength="22"
+                    android:privateImeOptions="nm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:text="Pay : "
+                    android:id="@+id/paytotal"
+                    android:gravity="center"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/submit_BT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/button_accent_round"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:padding="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="Confirm Payment"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

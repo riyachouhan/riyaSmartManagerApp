@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/forgot_TV"
+        style="@style/homeheader"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Please enter referral code"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/email_ET"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/text_bg_referral"
+        style="@style/EditTextSize"
+        android:inputType="text"
+        android:padding="@dimen/_6sdp"
+        android:singleLine="true" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit_BT"
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/button_accent_round"
+        android:text="Next"
+        android:textColor="@color/white"
+        style="@style/submitButtontextSize"
+        />
+
+    <TextView
+        style="@style/homeheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_gravity="center_horizontal"
+        android:text="Skip this step"
+        android:id="@+id/skip"
+        android:layout_marginBottom="@dimen/_1sdp"
+        android:textColor="@color/black" />
+
+    </LinearLayout>
+</LinearLayout>

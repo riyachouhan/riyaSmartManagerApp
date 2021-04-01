@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/viewclickdata"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:id="@+id/tvprice"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/txtblack"
+            />
+
+        <TextView
+            android:id="@+id/tvamount"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_weight="1.1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/txtblack"
+            />
+
+        <TextView
+            android:id="@+id/tvtotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:gravity="left"
+            android:layout_weight="0.9"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/txtblack"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

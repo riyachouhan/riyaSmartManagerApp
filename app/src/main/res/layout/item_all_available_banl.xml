@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_subcolor"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/squarewhite"
+        android:gravity="center"
+        android:id="@+id/ll_ParticularBankId"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:weightSum="2"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gcahlogo"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/iv_AllAvailableBankIcon"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Bank Name"
+            android:layout_weight="1.5"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/iv_AllAvailableBankName"
+            android:textSize="14dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

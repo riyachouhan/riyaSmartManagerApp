@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/btnGoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:drawableStart="@drawable/ic_go_back"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTint="@color/colorApp"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="Go back"
+            android:textColor="@color/colorApp"
+            android:textSize="@dimen/_10ssp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/text_card_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp"
+            android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter USDT Amount"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etDDKCoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="0"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:digits="0123456789."
+                    android:textColor="@color/colorBlackText"
+                    android:textColorHint="@color/colorBlackText"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="DDK Conversion"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="@dimen/_10ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvConversionCoin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="0"
+                        android:textColor="@color/colorBlackText"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <TextView
+                        android:id="@+id/tvRateCoin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="end"
+                        android:text="0"
+                        android:textColor="@color/colorBlackText"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvEsTextCoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Estimated Fees"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/tvEstimatedFeesCoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="0"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="@dimen/_14ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Total"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/tvTotalCoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="0"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="@dimen/_14ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvSelectCurrencyType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableEnd="@drawable/ic_expand_arrow"
+                        android:text="Select Crypto Currency"
+                        android:textColor="@color/colorBlackText" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorLine" />
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Coin Payment Trans Fee (%): "
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <TextView
+                            android:id="@+id/tvCoinTransactionFee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="@dimen/_8ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Selected Crypto : "
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <TextView
+                            android:id="@+id/tvCryptoCurrencyType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="Bitcoin(BTC)"
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="@dimen/_8ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_marginBottom="@dimen/_25ssp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Total Payment: "
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <TextView
+                            android:id="@+id/tvTotalCurrencyPayment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="@dimen/_8ssp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            <com.ncorti.slidetoact.SlideToActView
+                android:id="@+id/slide_custom_icon"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:slider_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                app:outer_color="#810B81"
+                android:layout_marginBottom="@dimen/_10ssp"
+                android:layout_marginTop="@dimen/_35ssp"
+                app:inner_color="@color/white"
+                app:area_margin="1dp"
+                app:text_size="14sp"
+                app:slider_icon="@drawable/ic_slider_icon"
+                app:text="Slide To Confirm "/>
+
+            </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

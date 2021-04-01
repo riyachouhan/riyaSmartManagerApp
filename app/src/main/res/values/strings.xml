@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">Smart Asset Managers</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAm6cgddaokQMNWHGwcitYolkUivMPULE0</string>
+    <string name="title_activity_home" translatable="false">HomeActivity</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="title_dashboard" translatable="false">Dashboard</string>
+    <string name="title_notifications" translatable="false">Notifications</string>
+    <string name="marketing" translatable="false">Blog</string>
+    <string name="tutorials" translatable="false">Tutorials</string>
+    <string name="profile" translatable="false">Profile</string>
+    <string name="forget" translatable="false">
+        <![CDATA[<font color=#ffffff>Forgot your Password?<b><font color=#ffffff> Get Password.</b>]]>
+    </string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="signup" translatable="false">
+        <![CDATA[<font color=#ffffff>Don\'t have an account?<b></font><font color=#00aeef> Join Now</b></font>]]>
+    </string>
+    <string name="perfect" translatable="false">Perfect! \nYou are all set.</string>
+
+    <string name="create_passphrase" translatable="false">Make sure you keep the passphrase safe. You will be asked to re-type it for confirmation.</string>
+    <string name="confrim_passphrase" translatable="false">Make sure you keep the passphrase safe. If you loose your passphrase later on, Your account cannot be restored and all your funds will be lost.</string>
+
+    <string name="activity_dialog_content" translatable="false">Tap \'OK\' to log out, when you log back in you\'ll be able to create a new Pincode.\n\nIf you remember your Pincode, tap \'Cancel\' to go back.</string>
+
+    <string name="title_fingerprint" translatable="false">One-touch Sign In</string>
+    <string name="desc_fingerprint" translatable="false">Please place your fingertip on the scanner to verify your identity</string>
+    <string name="note" translatable="false">(Fingerprint sign in makes your app login much faster. Your device should have at least one fingerprint registered in device settings)</string>
+
+    <string-array name="indicator_style">
+        <item>None</item>
+        <item>Circle</item>
+        <item>Icon</item>
+    </string-array>
+    <string-array name="indicator_gravity_hor">
+        <item>Left</item>
+        <item>Right</item>
+        <item>Center</item>
+    </string-array>
+    <string-array name="indicator_gravity_ver">
+        <item>Top</item>
+        <item>Bottom</item>
+        <item>Center</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="password" translatable="false">Password *</string>
+    <string name="email" translatable="false">Email *</string>
+    <string name="welcome_back" translatable="false">Welcome!</string>
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY" tools:ignore="ExtraTranslation">Bl6PZmtdV5absQhL3OMqWoVT7</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET" tools:ignore="ExtraTranslation">yd5n9CUVtLPmUmN0BB06iAHpMfePNy5gLlLxnHMgyja3UZx2UU</string>
+    <string name="custom_log_in_with_twitter" translatable="false">Custom Log in with Twitter</string>
+    <string name="get_profile_image" translatable="false">Fetch Profile Image</string>
+
+    <string name="facebook_app_id" translatable="false">926276997907305</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb926276997907305</string>
+
+
+    <string name="notification_add_to_cart_button" translatable="false">Like</string>
+    <string name="group_name" translatable="false">Group 1</string>
+
+    <string name="notifications_admin_channel_name" translatable="false">DDK Global Community</string>
+    <string name="notifications_admin_channel_description" translatable="false">DDK Global Community</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <string name="title_activity_login" translatable="false">LoginActivity</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="pooling" translatable="false">Projects</string>
+    <string name="transaction" translatable="false">Transaction</string>
+    <string-array name="payment_type_array">
+        <item>BTC</item>
+        <item>DDK</item>
+        <item>Credit Card</item>
+    </string-array>
+
+    <string name="invalid_card_number1" translatable="false">Your card\'s number is invalid.</string>
+    <string name="invalid_cvc1" translatable="false">Your card\'s security code is invalid.</string>
+    <string name="invalid_expiry_month1" translatable="false">Your card\'s expiration month is invalid.</string>
+    <string name="invalid_expiry_year1" translatable="false">Your card\'s expiration year is invalid.</string>
+    <string name="do_not_show_this_again" translatable="false">Do not show this message again</string>
+    <string name="withdrawal" translatable="false">Withdrawal</string>
+    <string name="cancellation" translatable="false">Cancellation</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="receivehint" translatable="false">Receive </string>
+    <string name="toclickfirst" translatable="false">To receive the </string>
+    <string name="toclicksecond" translatable="false"> coin share wallet address</string>
+    <string name="othersecondhint" translatable="false"> Coin share this QR Code
+with your friends/relative</string>
+    <string name="sendcoinother" translatable="false"> Coins in one just click via any of the following methods.</string>
+    <string name="api_error" translatable="false">Something went wrong on the application, Please close and re-open.
+If this message continue to display please contact the technical team.</string>
+
+    <string name="calling_api" translatable="false">Make sure your device is connceted to the internet.</string>
+
+</resources>

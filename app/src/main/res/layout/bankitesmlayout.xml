@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_selectedBank"
+        android:paddingLeft="@dimen/_8sdp"
+        android:gravity="left"
+        android:layout_gravity="left"
+        android:paddingRight="@dimen/_8sdp"
+        >
+
+        <ImageView
+            android:layout_gravity="left"
+            android:src="@drawable/twitter"
+            android:id="@+id/ivBankIconDDK"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+             />
+
+        <TextView
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:id="@+id/tvBankNameDDk"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="center"
+            android:text="Dena Bank"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_color"/>
+</LinearLayout>

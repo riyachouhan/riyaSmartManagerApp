@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingBottom="30dp">
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        style="@style/EditTextSize"
+        android:visibility="gone"
+        android:id="@+id/countrynamehint"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="Select Country "
+        />
+
+    <EditText
+        android:paddingTop="@dimen/_8sdp"
+        android:id="@+id/search_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:background="@drawable/search_edit_bg"
+        android:hint="Search"
+        android:padding="@dimen/_8sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:singleLine="true"
+        android:textColor="@color/colorApp"
+        android:textColorHint="@color/colorApp"
+        android:textSize="12sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+
+
+    <!---->

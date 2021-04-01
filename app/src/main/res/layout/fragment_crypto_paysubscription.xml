@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/userAvailable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Available BTC: 0.0 "
+                    android:layout_below="@+id/tvSelectDdkAddress"
+                    android:textColor="@color/colorApp"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/_60sdp"
+                    android:layout_width="match_parent"
+                    android:background="#990000"
+                    android:id="@+id/normalline"
+                    android:layout_height="0.5dp"/>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/_31sdp"
+                    android:layout_width="match_parent"
+                    android:background="#990000"
+                    android:visibility="gone"
+                    android:id="@+id/samkoinline"
+                    android:layout_height="0.5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/minimumamountview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorApp"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:text="20 USDT"
+                android:layout_below="@+id/tvSelectDdkAddress"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lytCreditView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:visibility="visible">
+
+            <EditText
+                android:layout_marginTop="@dimen/_5sdp"
+                android:id="@+id/etDDK"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/edittext_newdes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:hint="Enter BTC Amount "
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="number"
+                android:digits="0123456789."
+                android:textColor="@color/colorBlackText"
+                android:textColorHint="@color/colorBlackText"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:id="@+id/tvDDKFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorBlackText"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="SAM Koin Conversion"
+                    android:textSize="11sp"
+                    android:id="@+id/samconversiom"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorSecondaryText"
+                    />
+
+                <TextView
+                    android:id="@+id/tvRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:gravity="end"
+                    android:text="0"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvConversion"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:text="0"
+                android:textColor="@color/colorBlackText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvEsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:text="Fee"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvEstimatedFees"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="0"
+                android:textColor="@color/colorBlackText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:text="Total USDT Subscription"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:text="0"
+                android:textColor="@color/colorBlackText"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:id="@+id/toatsmsg"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:text="Please Wait..."
+                android:layout_marginTop="@dimen/_40sdp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/black"
+                />
+
+            <com.ncorti.slidetoact.SlideToActView
+                android:id="@+id/slide_custom_icon"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:slider_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                app:outer_color="#810B81"
+                app:inner_color="@color/white"
+                app:area_margin="1dp"
+                app:text_size="14sp"
+                app:slider_icon="@drawable/ic_slider_icon"
+                app:text="Slide To Confirm "/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

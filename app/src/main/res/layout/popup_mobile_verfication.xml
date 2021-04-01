@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/mobileicon"
+        android:layout_alignParentLeft="true"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/mbile_iconver"
+        android:layout_height="@dimen/_50sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="A message will send to your mobile and follow the instruction"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:gravity="center"
+        android:id="@+id/tvMobileNumber"
+        android:fontFamily="@font/montserrat_regular"
+        android:text=""
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/btnsendOtp"
+        android:layout_marginTop="10dp"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="Send"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/button_accent_round"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/savefoldevacl"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:padding="@dimen/_15sdp"
+        android:id="@+id/searcgvie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save to Folders"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:id="@+id/welcometext"
+            android:textColor="@color/black"
+            />
+
+           <ImageView
+               android:src="@drawable/ic_close_black_24dp"
+               android:padding="@dimen/_2sdp"
+               android:id="@+id/cloaseclick"
+                android:layout_alignParentRight="true"
+               android:layout_width="@dimen/_30sdp"
+               android:layout_height="@dimen/_30sdp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/showfolderlist"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:layout_marginTop="-5dp"
+            android:layout_below="@+id/searcgvie"
+            android:id="@+id/search_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:background="@drawable/search_edit_bg"
+            android:hint="Search folder"
+            android:padding="@dimen/_15sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_below="@+id/search_ET"
+            android:layout_width="match_parent"
+            android:id="@+id/createfolder"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="@dimen/_50sdp"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/createfolder"
+            android:layout_above="@+id/savedata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp" />
+
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/progress_news_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/savedata"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/colorApp"
+            android:text="Save"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <!---->

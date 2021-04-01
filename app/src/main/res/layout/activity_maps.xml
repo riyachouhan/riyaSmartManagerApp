@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/maplayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MapsActivity" />
+        <RelativeLayout
+            android:id="@+id/back_laout"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/current_location_background">
+            <ImageView
+                android:id="@+id/backImg"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginLeft="@dimen/_13sdp"
+                android:src="@drawable/back_button"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/pic_drop_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_below="@id/back_laout"
+            android:background="@drawable/greyborder">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:background="@drawable/green_round"/>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/grey_color"/>
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:background="@drawable/red_round"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_25sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/dark_grey_color"
+                    android:text="Pickup from"/>
+
+                <TextView
+                    android:id="@+id/pick_up_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:maxLines="2"
+                    android:text="Home"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/_10sdp"
+                    android:hint="Enter pikup location"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/grey_color"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </RelativeLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/drop_location_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:background="@null"
+                    android:maxLines="2"
+                    android:textColor="@color/dark_grey_color"
+                    android:hint="Enter Drop location" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="River,Village"
+                        android:padding="@dimen/_2sdp"
+                        android:background="@drawable/greyborder"
+                        android:layout_weight="1"/>
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="River,Village"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:background="@drawable/greyborder"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="River,Village"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:background="@drawable/greyborder"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/currrent_pin_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            >
+            <ImageView
+
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/purple_round"/>
+
+            <ImageView
+                android:id="@+id/current_location_pin"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/location"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/search_drop_location_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_color"
+        android:visibility="gone">
+        <RelativeLayout
+            android:id="@+id/search_back_laout"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+            <ImageView
+                android:id="@+id/search_backImg"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginLeft="@dimen/_13sdp"
+                android:src="@drawable/back_button"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/serah_drop_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Search drop location"/>
+
+        <RelativeLayout
+            android:id="@+id/search_pic_drop_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_25sdp"
+
+
+            android:layout_marginRight="@dimen/_25sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_below="@id/serah_drop_text"
+            android:background="@drawable/greyborder">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:background="@drawable/green_round"/>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/grey_color"/>
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:background="@drawable/red_round"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_25sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/dark_grey_color"
+                    android:text="Pickup from"/>
+
+<!--
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/search_pick_up_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:text="Home"
+                        android:textColor="@color/black_color"
+                        android:textSize="@dimen/_10sdp"
+                        android:hint="Enter pikup location"/>
+
+                    <RelativeLayout
+                        android:id="@+id/pic_cross_layout"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="@dimen/_30sdp">
+                        <ImageView
+                            android:id="@+id/pic_cros_img"
+                            android:visibility="gone"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/cancel"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+-->
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/search_pick_up_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:textSize="@dimen/_10sdp"
+                        android:background="@null"
+
+                        android:maxLines="2"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:textColor="@color/black_color"
+                        android:hint="Enter pickup location" />
+
+                    <RelativeLayout
+                        android:id="@+id/pic_cross_layout"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="@dimen/_30sdp">
+                        <ImageView
+                            android:id="@+id/pic_cros_img"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/cancel"/>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@color/grey_color"/>
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <EditText
+                       android:id="@+id/search_drop_location_edt"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_7sdp"
+                       android:textSize="@dimen/_10sdp"
+                       android:background="@null"
+                       android:maxLines="2"
+                       android:layout_marginRight="@dimen/_30sdp"
+                       android:textColor="@color/dark_grey_color"
+                       android:hint="Enter Drop location" />
+
+                   <RelativeLayout
+                       android:id="@+id/cross_layout"
+                       android:layout_width="@dimen/_30sdp"
+                       android:layout_alignParentRight="true"
+                       android:layout_height="@dimen/_30sdp">
+                       <ImageView
+                           android:id="@+id/cros_img"
+                           android:layout_width="@dimen/_15sdp"
+                           android:layout_height="@dimen/_15sdp"
+                           android:visibility="gone"
+                           android:layout_centerVertical="true"
+                           android:layout_centerHorizontal="true"
+                           android:src="@drawable/cancel"/>
+                   </RelativeLayout>
+
+
+               </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="River,Village"
+                        android:padding="@dimen/_2sdp"
+                        android:background="@drawable/greyborder"
+                        android:layout_weight="1"/>
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="River,Village"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:background="@drawable/greyborder"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="River,Village"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:background="@drawable/greyborder"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/find_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@+id/search_pic_drop_layout"
+            android:layout_centerHorizontal="true"
+            style="?android:attr/progressBarStyleSmall" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/address_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_below="@+id/find_progressbar"/>
+    </RelativeLayout>
+</RelativeLayout>

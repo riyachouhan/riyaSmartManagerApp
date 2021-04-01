@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="@dimen/padding">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/search_ET"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin"
+        android:background="@drawable/search_edit_white_bg"
+        android:hint="Search"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColorHint="@color/colorSecondaryText"
+        android:textStyle="italic"
+        android:inputType="textPersonName"
+        android:paddingRight="@dimen/margin"
+        android:paddingTop="@dimen/margin_medium"
+        android:paddingBottom="@dimen/margin_medium"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/title_TV"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:text="Events"
+            android:textStyle="bold"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/button_accent_round"
+            android:drawableLeft="@drawable/ic_add"
+            android:paddingLeft="@dimen/margin"
+            android:paddingRight="@dimen/margin"
+            android:text="Add Event"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium" />
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="center"
+        android:background="@color/background"
+        app:tabGravity="center"
+        app:tabIndicatorColor="@color/colorApp"
+        app:tabInlineLabel="true"
+        app:tabMode="auto"
+        app:tabSelectedTextColor="@color/colorApp"
+        app:tabTextColor="@color/tab_unSelect" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLine" />
+
+
+    <TextView
+        android:id="@+id/tvMsg"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:padding="24dp"
+        android:text="This features is in current development Temporary for demo purposes only."
+        android:textColor="@color/colorBlackText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWalletHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

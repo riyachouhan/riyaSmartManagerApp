@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_subcolor"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lytPhpPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMinimum"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvSelectDdkAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/edittext_newdes"
+                android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                android:gravity="left"
+                android:hint="Select DDk Address"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvAvailableDDK"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_height="wrap_content"
+                android:text="Available DDK 0.0"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvConversionRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Conversion rate 0.0"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/etDDK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_newdes"
+                android:hint="0"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="5dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Fee: 0 DKK"
+                    android:id="@+id/ddkfees"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:visibility="gone"
+                    android:id="@+id/transaction_fees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction Fees :"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTotalInPhp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Total in Php:"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Receiver Gcash Mobile Number *"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/etReceiverGcashMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/edittext_newdes"
+                android:hint="0"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="5dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                />
+
+            <com.ncorti.slidetoact.SlideToActView
+                android:id="@+id/slide_custom_icon"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:slider_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                app:outer_color="#810B81"
+                app:inner_color="@color/white"
+                app:area_margin="1dp"
+                app:text_size="14sp"
+                android:layout_margin="@dimen/_1sdp"
+                app:slider_icon="@drawable/ic_slider_icon"
+                app:text="Slide To Confirm Payment"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytSelectBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnFlagImage"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_visa1" />
+
+                <TextView
+                    android:id="@+id/tvBankNameMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="10dp"
+                    android:text="Convert your DDK to MYR then send to bank selected"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Select Bank Partners:"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/colorBlackText"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBankList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytDDKAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/text_card_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivBankIconDDK"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_visa1" />
+
+                <TextView
+                    android:id="@+id/tvBankNameDDk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:padding="10dp"
+                    android:text="HSBC Bank Malaysia"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/colorLightApp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="The funds will be credited to the recipient s account within the stated delivery
+time. However you may received the email or text notification from us on the
+next banking days"
+                android:textColor="@color/colorBlackText"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Please enter amount to cash out"
+                android:textColor="@color/colorBlackText"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etEnterAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:text="Wallet balance: 1,524.00"
+                android:textColor="@color/colorApp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Delivery Time"
+                android:textColor="@color/colorBlackText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvDeliveryTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Monday by 11:59 pm"
+                android:textColor="@color/colorBlackText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvFeeCharges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Fee 5.00"
+                android:textColor="@color/colorBlackText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/btnNext"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/button_accent_round"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Next"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytBankDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/text_card_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivBankIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_visa1" />
+
+                <TextView
+                    android:id="@+id/tvBankNameDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:padding="10dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="HSBC Bank Malaysia"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/colorLightApp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="The funds will be credited to the recipient s account within the stated delivery
+time. However you may received the email or text notification from us on the
+next banking days"
+                android:textColor="@color/colorBlackText"
+                android:textSize="@dimen/_10ssp" />
+
+            <TextView
+                android:id="@+id/btnShowAccount"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_accent_round"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Saved Account"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Account Holder Name"
+                android:textColor="@color/colorBlackText"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/etBankHolderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Bank Account Number"
+                android:textColor="@color/colorBlackText"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/etBankAcNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Recipient Mobile Number (Optional)"
+                android:textColor="@color/colorBlackText"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/etBankMobileNu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="An SMS will be sent to recipient once the have received the payment "
+                android:textColor="@color/colorBlackText"
+                android:textSize="@dimen/_8ssp" />
+
+            <TextView
+                android:id="@+id/btnConfirm"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@drawable/button_accent_round"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Confirm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytOtp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/logo1"
+                    android:layout_width="220dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/logo_white"
+                    android:tint="#820C83" />
+
+
+                <TextView
+                    android:id="@+id/full_name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_medium"
+                    android:text="OTP has been sent successfully to your Email/Phone. Please verify your account by entering it below."
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorSecondaryText"
+                    android:fontFamily="@font/montserrat_medium" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/rel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card1"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp">
+
+                            <EditText
+                                android:id="@+id/otp_edt11"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_back"
+                                android:elevation="4dp"
+                                android:gravity="center"
+                                android:hint="-"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:padding="15dp"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlackText"
+                                android:textColorHint="@color/colorAccent"
+                                android:textSize="14sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card2"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin"
+                            android:layout_marginTop="40dp">
+
+                            <EditText
+                                android:id="@+id/otp_edt12"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_back"
+                                android:elevation="4dp"
+                                android:gravity="center"
+                                android:hint="-"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:padding="15dp"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlackText"
+                                android:textColorHint="@color/colorAccent"
+                                android:textSize="14sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card3"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin"
+                            android:layout_marginTop="40dp">
+
+                            <EditText
+                                android:id="@+id/otp_edt13"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_back"
+                                android:elevation="4dp"
+                                android:gravity="center"
+                                android:hint="-"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:padding="15dp"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlackText"
+                                android:textColorHint="@color/colorAccent"
+                                android:textSize="14sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card4"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin"
+                            android:layout_marginTop="40dp">
+
+                            <EditText
+                                android:id="@+id/otp_edt14"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edit_back"
+                                android:elevation="4dp"
+                                android:gravity="center"
+                                android:hint="-"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:padding="15dp"
+                                android:singleLine="true"
+                                android:textColor="@color/colorBlackText"
+                                android:textColorHint="@color/colorAccent"
+                                android:textSize="14sp" />
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/timer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rel1"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/resend_otp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/timer"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Resend OTP"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/btnVerify"
+                    android:layout_width="200dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/button_accent_round"
+                    android:gravity="center"
+                    android:text="Verify"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

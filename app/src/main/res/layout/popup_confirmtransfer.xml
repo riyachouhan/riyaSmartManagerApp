@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="5dp"
+        android:background="@color/white"
+        android:id="@+id/view"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transfer"
+            android:textColor="#361e72"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/gcahlogo"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/send_money_bck">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/media_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/ll_SelectBank"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.9"
+                        android:id="@+id/ll_SelectBankName"
+                        android:layout_height="wrap_content"
+                        android:text="Select bank or E-remittance"
+                        android:textSize="14dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:gravity="right"
+                        android:src="@drawable/ic_forward_arrow"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/et_bankUserName"
+                android:hint="Enter Name"
+                android:textSize="14dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:singleLine="true"
+                android:inputType="number"
+                android:hint="Enter GCash No"
+                android:id="@+id/et_GCashNo"
+                android:textSize="14dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="gone"
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_marginTop="15dp"
+                android:hint="Enter Account No"
+                android:id="@+id/et_AccountNo"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text=""
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/montserrat_light"
+            android:textColor="@color/colorLightPurpal"
+            android:layout_marginRight="@dimen/_19sdp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvConfirmMoney"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_accent_round"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_25sdp"
+            android:text="Confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvDeleteBank"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_accent_round"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

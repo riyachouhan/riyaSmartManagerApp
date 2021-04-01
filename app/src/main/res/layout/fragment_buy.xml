@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/offWhite"
+    android:padding="@dimen/_10ssp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5ssp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Select Cryptocurrency"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="@color/txtblack"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvcryptospineer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/_5sdp"
+        android:drawableTint="@color/colorPrimary"
+        android:foregroundTint="@color/colorPrimary"
+        android:drawableLeft="@drawable/ic_ddk"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@drawable/text_card_bg"
+        android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:hint="Select Cryptocurrency"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/txtblack"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginRight="@dimen/_5ssp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:id="@+id/tvbuy"
+        android:text="Buy Rate : 0.00"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:gravity="right"
+        android:layout_marginLeft="@dimen/_5ssp"
+        android:textColor="@color/txtblack" />
+
+    <TextView
+        android:id="@+id/tvSelectDdkAddressddk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/text_card_bg"
+        android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+        android:gravity="center_vertical"
+        android:hint="Select DDk Address"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="8dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/txtblack"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColorHint="@color/txtblack"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Enter Amount"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:layout_marginLeft="@dimen/_5ssp"
+        android:layout_marginTop="@dimen/_10ssp"
+        android:textColor="@color/txtblack"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_5ssp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_card_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <EditText
+            android:id="@+id/ddk_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Amount"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/_5sdp"
+            android:singleLine="true"
+            android:background="@null"
+            android:paddingStart="@dimen/_10sdp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorBlackText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_weight="0.9"
+                android:text="Blockchain fee "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/txtblack"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:text="....................................................."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="0.0 USDT"
+                android:gravity="right"
+                android:id="@+id/block_fee"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_weight="0.9"
+                android:text="Credit card fee "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/txtblack"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:text="....................................................."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="0.0 USDT"
+                android:id="@+id/credit_fees"
+                android:gravity="right"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_weight="0.9"
+                android:text="Total"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/txtblack"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:text="....................................................."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:text="0.0 USDT"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:gravity="right"
+                android:id="@+id/total_fee"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:id="@+id/toatsmsg"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:text="Please Wait..."
+        android:layout_marginTop="@dimen/_40sdp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:textColor="@color/black"
+        />
+
+    <com.ncorti.slidetoact.SlideToActView
+        android:id="@+id/slide_custom_icon"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:slider_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        app:outer_color="@color/colorPrimary"
+        app:inner_color="@color/white"
+        app:area_margin="1dp"
+        app:text_size="14sp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:slider_icon="@drawable/ic_slider_icon"
+        app:text="Slide To Confirm Payment"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvDDKsecrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="gone"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvAvailableDDK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_gravity="left"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/selltype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

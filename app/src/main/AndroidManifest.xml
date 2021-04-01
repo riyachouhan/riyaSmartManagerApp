@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ddkcommunity"
+    tools:ignore="LockedOrientationActivity">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="com.google.android.926276997907305c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:name=".App"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup"
+        android:requestLegacyExternalStorage="true">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--  android:resource="@xml/picker_provider_paths"-->
+
+
+        <!--        <meta-data-->
+        <!--            android:name="com.facebook.sdk.ApplicationId"-->
+        <!--            android:value="@string/facebook_app_id" />-->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorTransparent" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.PoolingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.YoutubeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.ForgotActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.SignupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.OTPActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.CustomPinActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle" />
+        <activity
+            android:name=".activities.CreateWalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle" />
+        <activity
+            android:name=".activities.ReceivedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle" />
+        <activity
+            android:name=".activities.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.ReferralChainPayoutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarStyle"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.TermsAndConditionActivity"
+            android:theme="@style/NoActionBarStyle" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.com.vansuita.pickimage.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_provider_paths" />
+        </provider>
+
+        <provider
+            android:name=".utilies.LegacyCompatFileProvider"
+            android:authorities="com.ddkcommunity"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <provider android:authorities="com.facebook.app.FacebookContentProvider926276997907305"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activities.MapsActivity"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

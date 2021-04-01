@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="center"
+        android:background="@color/background"
+        app:tabTextAppearance="@style/MyCustomTabText_small"
+        app:tabIndicatorColor="@color/colorApp"
+        app:tabInlineLabel="true"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabPaddingBottom="@dimen/_5sdp"
+        app:tabPaddingTop="@dimen/_5sdp"
+        app:tabPaddingStart="@dimen/_12sdp"
+        app:tabPaddingEnd="@dimen/_12sdp"
+        app:tabSelectedTextColor="@color/colorApp"
+        app:tabTextColor="@color/tab_unSelect" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:background="@color/colorLine" />
+
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:visibility="gone"
+            android:layout_marginTop="-20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/transactionhistorylayout"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabstransactionistor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:background="@color/background"
+                app:tabGravity="center"
+                app:tabTextAppearance="@style/MyCustomTabText_small"
+                app:tabIndicatorColor="@color/colorApp"
+                app:tabInlineLabel="true"
+                app:tabMode="auto"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                app:tabPaddingBottom="@dimen/_4sdp"
+                app:tabPaddingTop="@dimen/_5sdp"
+                app:tabPaddingStart="@dimen/_12sdp"
+                app:tabPaddingEnd="@dimen/_12sdp"
+                app:tabSelectedTextColor="@color/colorApp"
+                app:tabTextColor="@color/tab_unSelect" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/colorLine" />
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/rvWalletHistory"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+           </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/summarylayout"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:background="@drawable/text_card_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:padding="@dimen/_4sdp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/card_blue_cornor"
+                                android:padding="@dimen/_7sdp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/subscription_new"
+                                android:tint="@color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="2.4"
+                            android:orientation="horizontal"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:text="Subscription"
+                                android:layout_weight="1.2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/colorBlackText"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_gravity="center_vertical"
+                                android:gravity="right"
+                                android:layout_weight="1.2"
+                                android:id="@+id/tvAmount_subscrip"
+                                android:layout_marginRight="@dimen/_8sdp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textStyle="bold"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+                    android:background="@drawable/text_card_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:padding="@dimen/_4sdp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/card_cornor_bg_green_5"
+                            android:padding="@dimen/_7sdp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/rewards"
+                            android:tint="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2.4"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:text="DDK Rewards"
+                            android:layout_weight="1.2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:gravity="right"
+                            android:layout_weight="1.2"
+                            android:id="@+id/tvAmount_ddkreward"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+                    android:background="@drawable/text_card_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:padding="@dimen/_4sdp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/card_reward"
+                            android:padding="@dimen/_7sdp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/rewards"
+                            android:tint="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2.4"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:text="SAM Rewards"
+                            android:layout_weight="1.2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:gravity="right"
+                            android:layout_weight="1.2"
+                            android:id="@+id/tvAmount_samrewards"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textStyle="bold"
+                            android:textColor="@color/reward_color"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+                    android:background="@drawable/text_card_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:padding="@dimen/_4sdp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/card_cashout_subs"
+                            android:padding="@dimen/_7sdp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/cashout"
+                            android:tint="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2.4"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:text="Sell"
+                            android:layout_weight="1.2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:gravity="right"
+                            android:layout_weight="1.2"
+                            android:id="@+id/tvAmount_cashout"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorApp"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+                    android:background="@drawable/text_card_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:padding="@dimen/_4sdp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/_34sdp"
+                            android:layout_height="@dimen/_34sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/card_reedeem"
+                            android:padding="@dimen/_7sdp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/reedeem_icon"
+                            android:tint="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2.4"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:text="Redeem"
+                            android:layout_weight="1.2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical"
+                            android:gravity="right"
+                            android:layout_weight="1.2"
+                            android:id="@+id/tvAmount_redeem"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textStyle="bold"
+                            android:textColor="@color/reedam"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:weightSum="2"
+                    android:id="@+id/bottom_view"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@drawable/text_card_bg"
+                        android:id="@+id/viewclickdata"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ivHistoryIcon"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/buy_icon"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/buy_icon"
+                                android:tint="@color/orange" />
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:text="Crypto Currency Buy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/orange"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:id="@+id/tvSamkoin"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/orange"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:id="@+id/tvbtc"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/orange"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:visibility="gone"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center_vertical"
+                                android:id="@+id/tvddk"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/orange"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center_vertical"
+                                android:text="ETH"
+                                android:id="@+id/tveth"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/orange"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:visibility="gone"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center_vertical"
+                                android:text="SAM"
+                                android:id="@+id/tvsam"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/orange"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center_vertical"
+                                android:text="USDT"
+                                android:id="@+id/tvusdt"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/orange"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@drawable/text_card_bg"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        >
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/buy_icon"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_send"
+                                android:tint="@color/darkblue" />
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:text="Crypto Currency Send"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/darkblue"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:text="SAM Koin"
+                                android:id="@+id/tvSamkoinsend"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:text="BTC"
+                                android:id="@+id/tvbtcsend"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center_vertical"
+                                android:text="DDK"
+                                android:visibility="gone"
+                                android:id="@+id/tvddksend"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center_vertical"
+                                android:text="ETH"
+                                android:id="@+id/tvethsend"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center_vertical"
+                                android:text="SAM"
+                                android:visibility="gone"
+                                android:id="@+id/tvsamsend"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center_vertical"
+                                android:text="USDT"
+                                android:id="@+id/tvusdtsend"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+    </LinearLayout>
+
+            </ScrollView>
+</RelativeLayout>
+
+</LinearLayout>

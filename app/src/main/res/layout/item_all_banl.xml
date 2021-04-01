@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/ll_allBankIconId"
+        android:background="@drawable/squarewhite">
+
+        <ImageView
+            android:id="@+id/iv_BankIconDDK"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:src="@drawable/gcahlogo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/audlayout"
+        android:background="@drawable/squarewhite"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/audtvBankNameDDk"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            style="@style/MyCustomTabText_small" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/ll_allBankId"
+        android:orientation="vertical"
+        android:background="@drawable/squarewhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/iv_AllIconDDK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALL"
+                style="@style/MyCustomTabText_small"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"/>
+
+            <ImageView
+                android:layout_marginTop="-6dp"
+                android:layout_below="@+id/iv_AllIconDDK"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:rotation="90"
+                android:id="@+id/iconaddmore"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_more_vert" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_30sdp"
+        android:padding="@dimen/_4sdp">
+
+        <TextView
+            android:id="@+id/tvbalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            style="@style/EditTextSize" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:text="Paying to"
+                android:gravity="center"
+                android:textColor="@color/black"
+                style="@style/subhintdataSize"
+                android:id="@+id/hintform"/>
+
+            <TextView
+                android:id="@+id/etWalletUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                style="@style/boldtextsie"
+                android:gravity="center"
+                android:text="Ricardo Alvaro"
+                android:textColor="@color/black"
+                 />
+
+             <TextView
+            android:id="@+id/upperheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            style="@style/subhintdataSize"
+            android:gravity="center"
+            android:text="SAMK"
+            android:textColor="@color/black"
+               />
+
+            <EditText
+                android:id="@+id/etDDKCoins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:hint="0"
+                android:inputType="number"
+                android:layout_gravity="center"
+                android:digits="0123456789."
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                style="@style/boldtextsie"
+                />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_35sdp"
+            style="@style/subhintdataSize"
+            android:gravity="center"
+            android:text="Choose any option to pay"
+            android:textColor="@color/black"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_20sdp"
+            android:weightSum="3"
+            android:id="@+id/samkoinmainlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:padding="@dimen/_5sdp"
+                    android:id="@+id/sambalancevewi"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:src="@drawable/ciclieselecetd"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/balancetextSize"
+                    android:gravity="center_vertical"
+                    android:text="SAMK"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/subhintdataSize"
+                    android:id="@+id/tvbalance_samk"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/samklo"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/grey_color"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_20sdp"
+            android:weightSum="3"
+            android:id="@+id/phpmainlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/phpbalancevewi"
+                    android:padding="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:src="@drawable/ciclieunselecetd"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/balancetextSize"
+                    android:gravity="center_vertical"
+                    android:text="PHP"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/subhintdataSize"
+                    android:id="@+id/tvbalance_php"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/phpiconim"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mainviewtrancsa"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Transcation Fee : "
+                style="@style/subhintdataSize"
+                />
+            <TextView
+                android:id="@+id/transactionfee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="0.0"
+                style="@style/subhintdataSize"
+                />
+
+        </LinearLayout>
+
+            <TextView
+            android:id="@+id/slide_custom_icon"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/button_accent_round"
+            android:gravity="center"
+            android:text=" Pay "
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="@dimen/_20sdp">
+
+    <TextView
+        android:id="@+id/sendheaderview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send DDK Coins in one just click via any of the following methods."
+        android:textColor="@color/colorBlackText"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="@dimen/_12sdp" />
+
+    <LinearLayout
+        android:id="@+id/lytShareViaQrCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_card_bg"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_send_qr_code"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:padding="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorApp"
+            android:text="SHARE VIA QR CODE"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/montserrat_medium"
+            android:drawableEnd="@drawable/ic_forward_arrow"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lytShareViaWalletAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_card_bg"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_send_wallet_address"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:padding="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorApp"
+            android:text="Send VIA wallet address"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_10ssp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:drawableEnd="@drawable/ic_forward_arrow"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lytShareViaEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_card_bg"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_send_email"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:padding="@dimen/_10sdp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorApp"
+            android:text="Send VIA EMAIL ADDRESS"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_10ssp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:drawableEnd="@drawable/ic_forward_arrow"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+</LinearLayout>

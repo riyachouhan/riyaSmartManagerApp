@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/side_nav_bar">
+
+            <ImageView
+                android:id="@+id/back_IV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_16sdp"
+                android:text="Create Account"
+                style="@style/submitButtontextSize"
+                android:textColor="@color/white" />
+
+        </androidx.appcompat.widget.Toolbar>
+        <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:padding="@dimen/_16sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/default_photo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:gravity="center_horizontal"
+                style="@style/submitButtontextSize"
+                android:text="Add photo" />
+
+            <EditText
+                android:id="@+id/referral_code_ET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/edit_back"
+                android:hint="Referral code"
+                android:padding="8dp"
+                style="@style/EditTextSize"
+                android:singleLine="true" />
+
+            <EditText
+                style="@style/EditTextSize"
+                android:id="@+id/name_ET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/edit_back"
+                android:hint="Name*"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:singleLine="true" />
+
+            <TextView
+                android:padding="8dp"
+                android:textColor="@color/black"
+                style="@style/EditTextSize"
+                android:hint="Select Date of Birth *"
+                android:background="@drawable/edit_back"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/birthdate_edt"/>
+
+            <EditText
+                style="@style/EditTextSize"
+                android:id="@+id/email_ET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/edit_back"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/password_ET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/edit_back"
+                android:hint="@string/password"
+                style="@style/EditTextSize"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:singleLine="true" />
+
+            <EditText
+                style="@style/EditTextSize"
+                android:id="@+id/confirm_password_ET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/edit_back"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/country_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_32sdp"
+                    android:layout_weight=".2"
+                    android:background="@drawable/edit_back"
+                    android:inputType="text"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="8dp"
+                    style="@style/EditTextSize"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/mobile_ET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:background="@drawable/edit_back"
+                    android:hint="Mobile Number*"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    style="@style/EditTextSize"
+                    android:padding="8dp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/phone_code_ET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/edit_back"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:hint="Country*"
+                style="@style/EditTextSize"
+                android:padding="8dp"
+                android:singleLine="true" />
+
+            <CheckBox
+                android:id="@+id/check_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:visibility="gone"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:text="Do you want to Create Wallet"
+                android:onClick="itemClicked"/>
+
+            <TextView
+                android:id="@+id/submit_BT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:background="@drawable/button_accent_round"
+                android:text="Join Now"
+                style="@style/submitButtontextSize"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+

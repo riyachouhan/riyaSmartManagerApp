@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:layout_margin="@dimen/_5sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+         android:id="@+id/phlayout"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/ic_addicon"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:src="@drawable/addicon" />
+
+        <ImageView
+            android:background="@drawable/circlewhite"
+            android:id="@+id/ivBankIconDDK"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/gcahlogo" />
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/phpiconview"
+            android:background="@drawable/circlewhite"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:src="@drawable/gcahlogo">
+
+            <TextView
+                android:id="@+id/headelogotext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvBankNameDDk"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="GCash"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/audlayout"
+        android:gravity="center_horizontal"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/audic_addicon"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:src="@drawable/addicon" />
+
+        <TextView
+            android:id="@+id/audtvBankNameDDk"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

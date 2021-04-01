@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/text_card_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="You will be charge 5% cancellation fee as SAM PROJECT DEVELOPMENT administration and management fee"
+        android:textColor="@color/colorBlackText" />
+
+    <TextView
+        android:id="@+id/btnClose"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_accent_round"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="OK"
+        android:textColor="@color/white" />
+</LinearLayout>

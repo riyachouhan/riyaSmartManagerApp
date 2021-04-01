@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProjectRecycle"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/listscroll"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_GeneralInformation"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/developmentsam"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="GENERAL \n INFORMATION"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_SamProductDisclosure"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/psd"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="SAM PRODUCT \n DISCLOSURE"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_mazines"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/magazine_icon"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="THE MAGAZINE"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_FreeFlightVoucher"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/freeligh"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_50sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="FREE FLIGHT \n VOUCHER"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_ImportExport"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:paddingTop="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/samlayer"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="IMPORT AND \n EXPORT"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_SamRide"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/samriden"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="SAM RIDE"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_moneyRemitance"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/samremitaned"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="MONEY \n REMITTANCE"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_samDelivery"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/devlivery"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="SAM DELIVERY"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_iLach"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ilacm"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="ILACM"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_samPdGrp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/developmentsam"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="SAM PD \n GRP"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_ventureProcessing"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/dev"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="VENTURE \n PROCESSING"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_beautyEntrepreneur"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/beatuty"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="BEAUTY AND WELLNESS \n ENTREPRENEUR"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginRight="@dimen/_7sdp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_transparentServer"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_card_bg"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                >
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/trapesm"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_height="@dimen/_70sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="TRANSPARENT \n SERVER"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+   </ScrollView>
+
+</LinearLayout>

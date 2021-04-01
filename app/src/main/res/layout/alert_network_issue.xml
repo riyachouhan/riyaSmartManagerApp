@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Message"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/apierrorname"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Message"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+                android:id="@+id/tvOrderStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:text="@string/calling_api"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/colorBlackText"
+                android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/dark_gray"/>
+
+        <TextView
+            android:id="@+id/btnGoHome"
+            android:layout_marginTop="-10dp"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="OK"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+</LinearLayout>

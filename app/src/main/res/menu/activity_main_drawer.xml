@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/account_settings"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/credentials"
+            android:icon="@drawable/ic_credentials"
+            android:title="Credentials" />
+        <item
+            android:id="@+id/stake"
+            android:visible="false"
+            android:icon="@drawable/ic_stake"
+            android:title="Stake" />
+        <item
+            android:id="@+id/send"
+            android:visible="false"
+            android:icon="@drawable/ic_send_menu"
+            android:title="Send" />
+        <item
+            android:visible="false"
+            android:id="@+id/receive"
+            android:icon="@drawable/ic_receive"
+            android:title="Receive" />
+        <item
+            android:visible="false"
+            android:id="@+id/send_message"
+            android:icon="@drawable/ic_mail"
+            android:title="Send us a message" />
+
+        <item
+            android:id="@+id/contact_set"
+            android:icon="@drawable/ic_mail"
+            android:title="Contact Us" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+    </group>
+
+</menu>

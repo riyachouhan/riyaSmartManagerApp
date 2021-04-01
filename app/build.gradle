@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+
+/*Password : .DDK@123
+     *Key password Alias: .DDK@123*/
+/*alias: ddkglobalcommunityalias*/
+def apikeyPropertiesFile = rootProject.file("apikeys.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+
+android
+{
+    compileSdkVersion 29
+
+    defaultConfig
+            {
+                applicationId "com.ddkcommunity"
+                minSdkVersion 21
+                targetSdkVersion 29
+                versionCode 46
+                versionName "2.4.17"
+                multiDexEnabled true
+                testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                buildConfigField("String", "YOUTUBE_API_KEY", apikeyProperties['YOUTUBE_API_KEY'])
+                buildConfigField("String", "URL_SHORTNER_API_KEY", apikeyProperties['URL_SHORTNER_API_KEY'])
+            }
+
+    buildTypes {
+        release
+        {
+            lintOptions
+            {
+                checkReleaseBuilds false
+                abortOnError false
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    configurations {
+        all*.exclude group: 'com.android.support', module: 'support-v13'
+    }
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'com.github.jrvansuita:PickImage:+'
+    implementation 'com.stripe:stripe-android:6.1.2'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.github.scottyab:showhidepasswordedittext:0.8'
+    implementation project(':lib')
+    implementation project(':qreader')
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-analytics:17.0.0'
+    //for pdf reader
+    implementation 'com.github.barteksc:android-pdf-viewer:2.0.3'
+    implementation "com.pdfview:pdfview-android:1.0.0"
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+    implementation 'com.twitter.sdk.android:twitter-core:3.1.1'
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+    implementation 'com.facebook.android:facebook-android-sdk:4.41.0'
+    implementation 'com.google.firebase:firebase-core:17.2.2'
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+    implementation 'com.google.firebase:firebase-iid:20.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    //Update app
+    implementation 'com.google.android.play:core:1.6.5'
+    //Open doc file
+    implementation 'com.commonsware.cwac:provider:0.4.3'
+    //Text and layout size margin
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    //Socket.io for realtime price
+    implementation 'com.github.nkzawa:socket.io-client:0.6.0'
+    //Swipe button_red
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.ncorti:slidetoact:0.3.0'
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+    implementation 'com.dinuscxj:circleprogressbar:1.3.6'
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+    //for video compree
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+}
+apply plugin: 'com.google.gms.google-services'

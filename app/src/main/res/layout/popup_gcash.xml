@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="5dp"
+        android:background="@color/white"
+        android:id="@+id/view"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/gcahlogo"
+            android:id="@+id/ivGcashLogo"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:gravity="center"
+            android:padding="@dimen/_4sdp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@null"
+                android:textSize="@dimen/_13sdp"
+                android:inputType="numberDecimal"
+                android:maxLength="12"
+                android:enabled="false"
+                android:id="@+id/et_gcashValue"
+                android:ems="12"
+                android:singleLine="true"
+                android:hint="Enter Amount"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="PHP"
+                android:id="@+id/tv_CountryId"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            android:layout_marginLeft="@dimen/_19sdp"
+            android:layout_marginRight="@dimen/_19sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Maximum of PHP 50,000"
+            android:id="@+id/tv_ConMaxTransfer"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/montserrat_light"
+            android:textColor="@color/colorLightPurpal"
+            android:layout_marginRight="@dimen/_19sdp"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/gcahname_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:id="@+id/et_gcahsname"
+                    android:enabled="false"
+                    android:textSize="@dimen/_13sdp"
+                    android:hint="Enter Gcash Name"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray"
+                android:layout_marginLeft="@dimen/_19sdp"
+                android:layout_marginRight="@dimen/_19sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:padding="@dimen/_4sdp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:singleLine="true"
+                android:id="@+id/et_name"
+                android:enabled="false"
+                android:maxLength="30"
+                android:textSize="@dimen/_13sdp"
+                android:hint="Enter GCash Number"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"
+            android:layout_marginLeft="@dimen/_19sdp"
+            android:layout_marginRight="@dimen/_19sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:visibility="invisible"
+            android:text="Max. of 30 characters"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/montserrat_light"
+            android:textColor="@color/colorLightPurpal"
+            android:layout_marginRight="@dimen/_19sdp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvSendMoney"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_accent_round"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_25sdp"
+            android:text="Send Money"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/tvUpdate"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_accent_round"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

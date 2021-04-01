@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Your Free Money Income Opportunities"
+        android:textColor="@color/colorBlackText"
+        android:textSize="@dimen/_12ssp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

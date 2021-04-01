@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:background="@drawable/text_card_bg"
+    android:id="@+id/viewclickdata"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:paddingBottom="@dimen/_4sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_4sdp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.6"
+            android:padding="@dimen/_4sdp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivHistoryIcon"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/card_blue_cornor"
+                android:padding="@dimen/_7sdp"
+                android:scaleType="centerInside"
+                android:src="@drawable/subscription_new"
+                android:tint="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2.4"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:text="cashout"
+                android:id="@+id/tvOrderType"
+                android:layout_weight="1.2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="@color/colorBlackText"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:layout_weight="1.2"
+                android:id="@+id/tvAmount"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray" />
+
+</LinearLayout>

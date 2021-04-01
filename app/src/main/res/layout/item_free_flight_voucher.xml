@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            android:textSize="@dimen/_13sdp"
+            android:id="@+id/tv_activityData"
+            android:fontFamily="@font/montserrat_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="12 Nov, 2020"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/_13sdp"
+            android:id="@+id/tv_activityDate"
+            android:layout_below="@+id/tv_activityData"
+            android:fontFamily="@font/montserrat_semibold"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
