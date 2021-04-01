@@ -12,7 +12,7 @@ android
     compileSdkVersion 29
 
     defaultConfig
-            {
+    {
                 applicationId "com.ddkcommunity"
                 minSdkVersion 21
                 targetSdkVersion 29
@@ -22,9 +22,10 @@ android
                 testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                 buildConfigField("String", "YOUTUBE_API_KEY", apikeyProperties['YOUTUBE_API_KEY'])
                 buildConfigField("String", "URL_SHORTNER_API_KEY", apikeyProperties['URL_SHORTNER_API_KEY'])
-            }
+    }
 
-    buildTypes {
+    buildTypes
+    {
         release
         {
             lintOptions
@@ -38,7 +39,8 @@ android
     }
 }
 
-dependencies {
+dependencies
+ {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     configurations {
