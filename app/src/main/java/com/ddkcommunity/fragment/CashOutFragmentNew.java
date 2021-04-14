@@ -291,6 +291,30 @@ public class CashOutFragmentNew extends Fragment implements View.OnClickListener
             }
             tvAvailableDDK.setText(Html.fromHtml(styledTextddk), TextView.BufferType.SPANNABLE);
             styledText1 = "<font color='black'>Minimum Sell : </font>" + amountminim + " PHP";
+
+        }else if(countrydata.equalsIgnoreCase("indonesia"))
+        {
+            usercountryselect=3;
+            totleinhint.setText("Total in IDR");
+            String styledTextddk="";
+            if(userselctionopt.equalsIgnoreCase("DDK"))
+            {
+                styledTextddk= "<font color='black'>Available DDK : </font>"+aviabelcashoutamount+"";
+            }else
+            {
+                // getSettingServerOnTab(getActivity(),"php_buy_from_sam_koin");
+                BigDecimal currentbalance;
+                BigDecimal roundhaldv = null;
+                String samkoinvalue=App.pref.getString(Constant.SAMKOIN_Balance, "");
+                if(samkoinvalue!=null)
+                {
+                    currentbalance = new BigDecimal(samkoinvalue);
+                    roundhaldv = currentbalance.setScale(4, BigDecimal.ROUND_FLOOR);
+                }
+                styledTextddk= "<font color='black'>SAM Koin : </font>"+roundhaldv+"";
+            }
+            tvAvailableDDK.setText(Html.fromHtml(styledTextddk), TextView.BufferType.SPANNABLE);
+            styledText1 = "<font color='black'>Minimum Sell : </font>" + amountminim + " IDR";
         }else
         {
             usercountryselect=2;
@@ -322,7 +346,7 @@ public class CashOutFragmentNew extends Fragment implements View.OnClickListener
 
         Log.d("country",countrydata);
         String curkjnew= App.pref.getString(Constant.PHP_Functionality_View, "");
-        if(countrydata!=null && (countrydata.equalsIgnoreCase("philippines") || countrydata.equalsIgnoreCase("australia")))
+        if(countrydata!=null && (countrydata.equalsIgnoreCase("philippines") || countrydata.equalsIgnoreCase("australia") || countrydata.equalsIgnoreCase("indonesia")))
         {
             lytPhpPayment.setVisibility(View.VISIBLE);
             lytSelectBank.setVisibility(View.GONE);
@@ -410,7 +434,14 @@ public class CashOutFragmentNew extends Fragment implements View.OnClickListener
 
                                } else
                                {
-                                   String transcationfee=App.pref.getString(Constant.sellsam_transaction_fees, "");
+                                   String transcationfee;
+                                   if(countrydata!=null && (countrydata.equalsIgnoreCase("indonesia")))
+                                   {
+                                       transcationfee=App.pref.getString(Constant.sellsam_transaction_feeskpay, "");
+                                   }else
+                                   {
+                                       transcationfee=App.pref.getString(Constant.sellsam_transaction_fees, "");
+                                   }
                                    BigDecimal transcationfeeserver=new BigDecimal(transcationfee);
                                    BigDecimal transactionfeeam = etDDKValue.multiply(transcationfeeserver);
                                    BigDecimal transactionfeemain = transactionfeeam.divide(BigDecimal.valueOf(100));
@@ -800,11 +831,15 @@ public class CashOutFragmentNew extends Fragment implements View.OnClickListener
                 status = "Minimum amount";
                 if(usercountryselect==1)
                 {
-                    DataNotFound(getActivity(),"Minimum amount will be php "+cashoutamount);
+                    DataNotFound(getActivity(),"Minimum amount will be PHP "+cashoutamount);
 
-                }else
+                }else if(usercountryselect==2)
                 {
-                    DataNotFound(getActivity(),"Minimum amount will be Aud "+cashoutamount);
+                    DataNotFound(getActivity(),"Minimum amount will be AUD "+cashoutamount);
+
+                }else if(usercountryselect==3)
+                {
+                    DataNotFound(getActivity(),"Minimum amount will be IDR "+cashoutamount);
                 }
             }else {
                 status = "complete";
@@ -823,11 +858,15 @@ public class CashOutFragmentNew extends Fragment implements View.OnClickListener
                 status = "Minimum amount";
                 if(usercountryselect==1)
                 {
-                    DataNotFound(getActivity(),"Minimum amount will be php "+cashoutamount);
+                    DataNotFound(getActivity(),"Minimum amount will be PHP "+cashoutamount);
 
-                }else
+                }else if(usercountryselect==2)
                 {
-                    DataNotFound(getActivity(),"Minimum amount will be Aud "+cashoutamount);
+                    DataNotFound(getActivity(),"Minimum amount will be AUD "+cashoutamount);
+
+                }else if(usercountryselect==3)
+                {
+                    DataNotFound(getActivity(),"Minimum amount will be IDR "+cashoutamount);
                 }
             }else {
                 status = "complete";
@@ -1026,6 +1065,9 @@ public class CashOutFragmentNew extends Fragment implements View.OnClickListener
         if(countrydata!=null && (countrydata.equalsIgnoreCase("philippines"))) {
             hm.put("to","php");
 
+        }else if(countrydata!=null && (countrydata.equalsIgnoreCase("indonesia"))) {
+            hm.put("to","idr");
+
         }else {
             hm.put("to","aud");
         }
@@ -1040,8 +1082,9 @@ public class CashOutFragmentNew extends Fragment implements View.OnClickListener
                         JSONObject object = new JSONObject(responseData);
                         if (object.getBoolean("success"))
                         {
-                            tvTotalInPhp.setText("" + object.getString("result"));
                             totalPhpValue = object.getString("result");
+                            BigDecimal totalamouny=new BigDecimal(totalPhpValue);
+                            tvTotalInPhp.setText("" + totalamouny.toPlainString());
                             if(etDDK.getText().toString().equalsIgnoreCase(""))
                             {
                                 tvTotalInPhp.setText("");
@@ -1287,8 +1330,20 @@ public class CashOutFragmentNew extends Fragment implements View.OnClickListener
                         int sizedata=bankList.size();
                         bankListAdapter.updateData(bankList, response.body().image_path);
                         //for list
-                        if(bankList.size()>8) {
-                            bankList.subList(0, 8).clear();
+                        if(bankList.size()>8)
+                        {
+                            bankListnewli.addAll(bankList);
+                            bankList.clear();
+                            for(int i=0;i<bankListnewli.size();i++)
+                            {
+                                if(bankList.size()==8)
+                                {
+                                    break;
+                                }else
+                                {
+                                    bankList.add(bankListnewli.get(i));
+                                }
+                            }
                         }
                         BankList.BankData bankData4 = new BankList.BankData();
                         bankData4.setBank_name("All");

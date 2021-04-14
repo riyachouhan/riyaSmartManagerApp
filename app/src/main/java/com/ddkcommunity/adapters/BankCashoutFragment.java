@@ -85,7 +85,7 @@ public class BankCashoutFragment extends RecyclerView.Adapter<BankCashoutFragmen
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
-        if (usercountryselect==1)
+        if (usercountryselect==1 || usercountryselect==3)
         {
             holder.tvBankNameDDk.setText(data.get(position).bank_name);
             Glide.with(mContext).load(SLIDERIMG+ data.get(position).image).into(holder.ivBankIconDDK);
@@ -178,13 +178,19 @@ public class BankCashoutFragment extends RecyclerView.Adapter<BankCashoutFragmen
         UserResponse userData = AppConfig.getUserData(mContext);
         String countrydata=userData.getUser().country.get(0).country;
         Log.d("country",countrydata);
-        if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines")){
-            tv_CountryId.setText("PHP");
-            tv_ConMaxTransfer.setText("Maximum of PHP 50,000");
-         }else {
+        if(countrydata!=null && countrydata.equalsIgnoreCase("australia"))
+        {
             tv_CountryId.setText("AUD");
             tv_ConMaxTransfer.setText("Maximum of AUD 50,000");
-        }
+        }else if(countrydata!=null && countrydata.equalsIgnoreCase("indonesia"))
+        {
+        tv_CountryId.setText("IDR");
+        tv_ConMaxTransfer.setText("Maximum of IDR 50,000");
+        }else
+          {
+              tv_CountryId.setText("PHP");
+              tv_ConMaxTransfer.setText("Maximum of PHP 50,000");
+          }
         tv_ConMaxTransfer.setVisibility(View.GONE);
 
         view.setOnClickListener(new View.OnClickListener() {
@@ -275,6 +281,11 @@ public class BankCashoutFragment extends RecyclerView.Adapter<BankCashoutFragmen
             ivBankLogo.setVisibility(View.VISIBLE);
             tv_ConMaxTransfer.setText("Maximum of PHP 50,000");
             etAccountName.setHint("Enter Account Name");
+        }else if(countrydata!=null && countrydata.equalsIgnoreCase("indonesia")){
+            tv_CountryId.setText("IDR");
+            ivBankLogo.setVisibility(View.VISIBLE);
+            tv_ConMaxTransfer.setText("Maximum of IDR 50,000");
+            etAccountName.setHint("Enter Account Name");
         }else {
             tv_CountryId.setText("AUD");
             ivBankLogo.setVisibility(View.INVISIBLE);
@@ -306,10 +317,12 @@ public class BankCashoutFragment extends RecyclerView.Adapter<BankCashoutFragmen
                     String etAccountNumbervalue = etAccountNumber.getText().toString();
                     if (holder_name.equalsIgnoreCase(""))
                     {
-                        if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines")){
-                            Toast.makeText(mContext, "Please enter Account Name", Toast.LENGTH_SHORT).show();
-                        }else {
+
+                        if(countrydata!=null && countrydata.equalsIgnoreCase("australia"))
+                        {
                             Toast.makeText(mContext, "Please enter BSB Name", Toast.LENGTH_SHORT).show();
+                        }else {
+                            Toast.makeText(mContext, "Please enter Account Name", Toast.LENGTH_SHORT).show();
                         }
                     } else if (etAccountNumbervalue.equalsIgnoreCase("")) {
                         Toast.makeText(mContext, "Please enter Account Number", Toast.LENGTH_SHORT).show();

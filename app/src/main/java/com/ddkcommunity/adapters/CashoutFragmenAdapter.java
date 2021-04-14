@@ -112,13 +112,15 @@ public class CashoutFragmenAdapter extends RecyclerView.Adapter<CashoutFragmenAd
                 holder.ivBankIconDDK.setVisibility(View.GONE);
                 String niconm=SLIDERIMG+createCancellationRequestlist.get(position).getBank().getImage();
                 Glide.with(activity).asBitmap().load(niconm).into(holder.ivBankIconDDK);
-                if (createCancellationRequestlist.get(position).getBank().getBankName().equals("Addoption")){
+                if (createCancellationRequestlist.get(position).getBank().getBankName().equals("Addoption"))
+                {
                     holder.ic_addicon.setVisibility(View.VISIBLE);
                     holder.ivBankIconDDK.setVisibility(View.GONE);
                     holder.tvBankNameDDk.setVisibility(View.GONE);
                     holder.phpiconview.setVisibility(View.GONE);
                     holder.tvBankNameDDk.setText(createCancellationRequestlist.get(position).getBank().getBankName());
-                }else {
+                }else
+                {
                     holder.phpiconview.setVisibility(View.VISIBLE);
                     String headtext=createCancellationRequestlist.get(position).getName();
                     if(!headtext.equalsIgnoreCase("") && headtext!=null)
@@ -137,22 +139,25 @@ public class CashoutFragmenAdapter extends RecyclerView.Adapter<CashoutFragmenAd
                 holder.phlayout.setVisibility(View.GONE);
                 holder.ivBankIconDDK.setVisibility(View.GONE);
                 holder.phpiconview.setVisibility(View.GONE);
-                if (createCancellationRequestlist.get(position).getBank().getBankName().equals("Addoption")){
+                if (createCancellationRequestlist.get(position).getBank().getBankName().equals("Addoption"))
+                {
                     holder.audic_addicon.setVisibility(View.VISIBLE);
                     holder.audtvBankNameDDk.setVisibility(View.GONE);
-                }else {
+                }else
+                {
                     holder.audtvBankNameDDk.setText(createCancellationRequestlist.get(position).getBank().getBankName());
                 }
 
             }
 
-            holder.audic_addicon.setOnClickListener(new View.OnClickListener() {
+            holder.audic_addicon.setOnClickListener(new View.OnClickListener()
+            {
                 @Override
                 public void onClick(View v)
                 {
                     String calue = ((CashOutFragmentNew) cashOutFragmentNew).checkValidation();
-                    if (calue.equals("complete")) {
-
+                    if (calue.equals("complete"))
+                    {
                         LayoutInflater layoutInflater = LayoutInflater.from(activity);
                         View dialogView = layoutInflater.inflate(R.layout.popup_trasfer, null);
                         final BottomSheetDialog dialog = new BottomSheetDialog(activity, R.style.DialogStyle);
@@ -185,15 +190,17 @@ public class CashoutFragmenAdapter extends RecyclerView.Adapter<CashoutFragmenAd
                                 {
                                     String countrydata=userData.getUser().country.get(0).country;
                                     Log.d("country",countrydata);
-                                    if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines")){
+                                    if(countrydata!=null && countrydata.equalsIgnoreCase("australia"))
+                                    {
+                                        et_bankUserName.setError("Please BSB name");
+                                    }else
+                                    {
                                         if (selectedBank.equalsIgnoreCase("bank")) {
                                             et_bankUserName.setError("Please Enter Name");
                                         }else
                                         {
                                             et_bankUserName.setError("Please Enter GCash Name");
                                         }
-                                    }else {
-                                        et_bankUserName.setError("Please BSB name");
                                     }
                                     et_bankUserName.requestFocus();
                                 } else if (selectedBank.equalsIgnoreCase("")) {
@@ -275,15 +282,17 @@ public class CashoutFragmenAdapter extends RecyclerView.Adapter<CashoutFragmenAd
                                 {
                                     String countrydata=userData.getUser().country.get(0).country;
                                     Log.d("country",countrydata);
-                                    if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines")){
+                                    if(countrydata!=null && countrydata.equalsIgnoreCase("australia"))
+                                    {
+                                        et_bankUserName.setError("Please BSB name");
+                                    }else
+                                    {
                                         if (selectedBank.equalsIgnoreCase("bank")) {
                                             et_bankUserName.setError("Please Enter Name");
                                         }else
                                         {
                                             et_bankUserName.setError("Please Enter GCash Name");
                                         }
-                                    }else {
-                                        et_bankUserName.setError("Please BSB name");
                                     }
                                     et_bankUserName.requestFocus();
                                 } else if (selectedBank.equalsIgnoreCase("")) {
@@ -537,10 +546,12 @@ public class CashoutFragmenAdapter extends RecyclerView.Adapter<CashoutFragmenAd
                     et_GCashNo.setVisibility(View.GONE);
                     String countrydata=userData.getUser().country.get(0).country;
                     Log.d("country",countrydata);
-                    if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines")){
-                        et_bankUserName.setHint("Enter Account Name");
-                    }else {
+                    if(countrydata!=null && countrydata.equalsIgnoreCase("australia"))
+                    {
                         et_bankUserName.setHint("Enter BSB Name");
+                    }else
+                    {
+                        et_bankUserName.setHint("Enter Account Name");
                     }
 
                 }else {

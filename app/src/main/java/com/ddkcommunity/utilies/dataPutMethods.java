@@ -999,10 +999,16 @@ public class dataPutMethods
         UserResponse userData = AppConfig.getUserData(mContext);
         String countrydata=userData.getUser().country.get(0).country;
         Log.d("country",countrydata);
-        if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines")){
+        if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines"))
+        {
             tv_CountryId.setText("PHP");
             ivBankLogo.setVisibility(View.VISIBLE);
             tv_ConMaxTransfer.setText("Maximum of PHP 50,000");
+            etAccountName.setHint("Enter Account Name");
+        }else if(countrydata!=null && countrydata.equalsIgnoreCase("indonesia")){
+            tv_CountryId.setText("IDR");
+            ivBankLogo.setVisibility(View.VISIBLE);
+            tv_ConMaxTransfer.setText("Maximum of IDR 50,000");
             etAccountName.setHint("Enter Account Name");
         }else {
             tv_CountryId.setText("AUD");
@@ -1284,83 +1290,167 @@ public class dataPutMethods
         String conversionratevalue=conversionrate.replace("Conversion rate :","");
         String conversionratesub=conversionratevalue.replace(" USDT","");
         String substeing=conversionratesub;
-        HashMap<String, String> hm = new HashMap<>();
-        String koinadd=App.pref.getString(Constant.SAMKOIN_ADD, "");
-        hm.put("sender_address", ""+koinadd);
-        hm.put("conversion_rate", ""+substeing);
-        hm.put("total_amount", phpamount);
-        hm.put("input_amount", ddkamount);
-        String trascationfeev=CashOutFragmentNew.transaction_fees.getText().toString().replace("Transaction Fees : ","");
-        hm.put("fee", trascationfeev);
-        if(CashOutFragmentNew.countrydata.equalsIgnoreCase("philippines"))
-        {
-            hm.put("transaction_for", "php");
-        }else
-        {
-            hm.put("transaction_for", "aud");
-        }
-        hm.put("input_amount",ddkamount);
-        hm.put("secret",App.pref.getString(Constant.SAMKOIN_Secaret, ""));
-        hm.put("iv", App.pref.getString(Constant.IVPARAM, ""));
-        hm.put("key", App.pref.getString(Constant.KEYENCYPARAM, ""));
-        //for bank
-        hm.put("bank_type", bank_type);
-        hm.put("holder_name",holder_name);
-        hm.put("account_no", account_no);
-        hm.put("gcash_no",gcash_no);
-        hm.put("email", email);
-        hm.put("bank_id", bank_id);
-        hm.put("user_bank_id", id);
         final ProgressDialog dialog = new ProgressDialog(MainActivity.activity);
         AppConfig.showLoading(dialog, "Confirm Payment....");
         String tokenvalue=AppConfig.getStringPreferences(mContext, Constant.JWTToken);
-        Log.d("param",hm.toString());
-        AppConfig.getLoadInterface().sendCashOutSamKoin(AppConfig.getStringPreferences(mContext, Constant.JWTToken), hm).enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                AppConfig.hideLoading(dialog);
-                try {
+        if(CashOutFragmentNew.countrydata.equalsIgnoreCase("indonesia"))
+        {
+            HashMap<String, String> hm = new HashMap<>();
+            String koinadd=App.pref.getString(Constant.SAMKOIN_ADD, "");
+            hm.put("sender_address", ""+koinadd);
+            hm.put("device_token", App.RegPref.getString(Constant.FIREBASE_TOKEN, ""));
+            hm.put("conversion_rate", ""+substeing);
+            hm.put("total_amount", phpamount);
+            hm.put("input_amount", ddkamount);
+            String trascationfeev=CashOutFragmentNew.transaction_fees.getText().toString().replace("Transaction Fees : ","");
+            hm.put("fee", trascationfeev);
+            hm.put("transaction_for", "idr");
+            hm.put("input_amount",ddkamount);
+            hm.put("secret",App.pref.getString(Constant.SAMKOIN_Secaret, ""));
+            hm.put("iv", App.pref.getString(Constant.IVPARAM, ""));
+            hm.put("key", App.pref.getString(Constant.KEYENCYPARAM, ""));
+            //for bank
+            hm.put("bank_type", bank_type);
+            hm.put("holder_name",holder_name);
+            hm.put("account_no", account_no);
+            hm.put("gcash_no",gcash_no);
+            hm.put("email", email);
+            hm.put("bank_id", bank_id);
+            hm.put("user_bank_id", id);
+            hm.put("device_type", "android");
+            Log.d("cahsoutfor",hm.toString());
+            //for indo
+            AppConfig.getLoadInterface().sendCashOutSamKoinIndonesia(AppConfig.getStringPreferences(mContext, Constant.JWTToken), hm).enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    AppConfig.hideLoading(dialog);
+                    try {
 
-                    if (response.isSuccessful() && response.body() != null) {
-                        String responseData = response.body().string();
-                        JSONObject object = new JSONObject(responseData);
-                        Log.d("responsse",""+object);
-                        if (object.getInt(Constant.STATUS) == 1) {
-                            try {
-                                final JSONObject dataObject = object.getJSONObject("data");
-                                transactionStatus(mContext,dataObject.getString("txt_id"));
-                            } catch (JSONException e) {
-                                AppConfig.showToast("Server error");
-                                e.printStackTrace();
+                        if (response.isSuccessful() && response.body() != null) {
+                            String responseData = response.body().string();
+                            JSONObject object = new JSONObject(responseData);
+                            Log.d("responsse",""+object);
+                            if (object.getInt(Constant.STATUS) == 1) {
+                                try {
+                                    final JSONObject dataObject = object.getJSONObject("data");
+                                    transactionStatus(mContext,dataObject.getString("txt_id"));
+                                } catch (JSONException e) {
+                                    AppConfig.showToast("Server error");
+                                    e.printStackTrace();
+                                }
+                            }else if (object.getInt(Constant.STATUS) == 4)
+                            {
+                                ShowServerPost((Activity)mContext,"ddk server error cashout");
+                            } else {
+                                AppConfig.hideLoading(dialog);
+                                AppConfig.showToast(object.getString("msg"));
                             }
-                        }else if (object.getInt(Constant.STATUS) == 4)
-                        {
-                            ShowServerPost((Activity)mContext,"ddk server error cashout");
                         } else {
-                            AppConfig.hideLoading(dialog);
-                            AppConfig.showToast(object.getString("msg"));
+                            AppConfig.showToast("Server error");
                         }
-                    } else {
+                    } catch (IOException e) {
+                        AppConfig.hideLoading(dialog);
                         AppConfig.showToast("Server error");
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        AppConfig.hideLoading(dialog);
+                        AppConfig.showToast("Server error");
+                        e.printStackTrace();
                     }
-                } catch (IOException e) {
-                    AppConfig.hideLoading(dialog);
-                    AppConfig.showToast("Server error");
-                    e.printStackTrace();
-                } catch (JSONException e) {
-                    AppConfig.hideLoading(dialog);
-                    AppConfig.showToast("Server error");
-                    e.printStackTrace();
                 }
-            }
 
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t)
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t)
+                {
+                    AppConfig.hideLoading(dialog);
+                }
+            });
+            //...........
+        }else
+        {
+            HashMap<String, String> hm = new HashMap<>();
+            String koinadd=App.pref.getString(Constant.SAMKOIN_ADD, "");
+            hm.put("sender_address", ""+koinadd);
+            hm.put("conversion_rate", ""+substeing);
+            hm.put("total_amount", phpamount);
+            hm.put("input_amount", ddkamount);
+            String trascationfeev=CashOutFragmentNew.transaction_fees.getText().toString().replace("Transaction Fees : ","");
+            hm.put("fee", trascationfeev);
+            if(CashOutFragmentNew.countrydata.equalsIgnoreCase("philippines"))
             {
-                AppConfig.hideLoading(dialog);
+                hm.put("transaction_for", "php");
+            }else if(CashOutFragmentNew.countrydata.equalsIgnoreCase("indonesia"))
+            {
+                hm.put("transaction_for", "idr");
+            }else
+            {
+                hm.put("transaction_for", "aud");
             }
-        });
-    }
+            hm.put("input_amount",ddkamount);
+            hm.put("secret",App.pref.getString(Constant.SAMKOIN_Secaret, ""));
+            hm.put("iv", App.pref.getString(Constant.IVPARAM, ""));
+            hm.put("key", App.pref.getString(Constant.KEYENCYPARAM, ""));
+            //for bank
+            hm.put("bank_type", bank_type);
+            hm.put("holder_name",holder_name);
+            hm.put("account_no", account_no);
+            hm.put("gcash_no",gcash_no);
+            hm.put("email", email);
+            hm.put("bank_id", bank_id);
+            hm.put("user_bank_id", id);
+            Log.d("cahsoutfor",hm.toString());
+
+            AppConfig.getLoadInterface().sendCashOutSamKoin(AppConfig.getStringPreferences(mContext, Constant.JWTToken), hm).enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    AppConfig.hideLoading(dialog);
+                    try {
+                        if (response.isSuccessful() && response.body() != null)
+                        {
+                            String responseData = response.body().string();
+                            JSONObject object = new JSONObject(responseData);
+                            Log.d("responsse",""+object);
+                            if (object.getInt(Constant.STATUS) == 1)
+                            {
+                                try {
+                                    final JSONObject dataObject = object.getJSONObject("data");
+                                    transactionStatus(mContext,dataObject.getString("txt_id"));
+                                } catch (JSONException e)
+                                {
+                                    AppConfig.showToast("Server error");
+                                    e.printStackTrace();
+                                }
+                            }else if (object.getInt(Constant.STATUS) == 4)
+                            {
+                                ShowServerPost((Activity)mContext,"ddk server error cashout");
+                            } else
+                                {
+                                AppConfig.hideLoading(dialog);
+                                AppConfig.showToast(object.getString("msg"));
+                            }
+                        } else {
+                            AppConfig.showToast("Server error");
+                        }
+                    } catch (IOException e) {
+                        AppConfig.hideLoading(dialog);
+                        AppConfig.showToast("Server error");
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        AppConfig.hideLoading(dialog);
+                        AppConfig.showToast("Server error");
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t)
+                {
+                    AppConfig.hideLoading(dialog);
+                }
+            });
+        }
+
+       }
 
     //..........
     private static void sendPaymentDDk(final String id,final String bank_type,final String holder_name,final String account_no,final String gcash_no,final String email,final String bank_id,final String conversionrate,final String secrate,final String phpamount,final String ddkamount,final String ddkaddress,final Activity mContext) {
@@ -1513,6 +1603,9 @@ public class dataPutMethods
         if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines")){
             tv_CountryId.setText("PHP");
             tv_ConMaxTransfer.setText("Maximum of PHP 50,000");
+        }else if(countrydata!=null && countrydata.equalsIgnoreCase("indonesia")){
+            tv_CountryId.setText("IDR");
+            tv_ConMaxTransfer.setText("Maximum of IDR 50,000");
         }else {
             tv_CountryId.setText("AUD");
             tv_ConMaxTransfer.setText("Maximum of AUD 50,000");

@@ -269,13 +269,13 @@ public class SplashActivity extends AppCompatActivity implements GoogleApiClient
                             {
                                 String imgview = response.body().getData().getAndroidVersion();
                                 String versionName = BuildConfig.VERSION_NAME;
-                                if(imgview.equalsIgnoreCase(versionName))
+                                //if(imgview.equalsIgnoreCase(versionName))
                                 {
                                     proceed();
-                                }else
+                                }/*else
                                 {
                                     ShowVersionError(SplashActivity.this);
-                                }
+                                }*/
                             }
                         } catch (Exception e)
                         {

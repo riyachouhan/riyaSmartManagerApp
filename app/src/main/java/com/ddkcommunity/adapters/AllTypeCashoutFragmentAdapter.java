@@ -79,9 +79,10 @@ public class AllTypeCashoutFragmentAdapter extends RecyclerView.Adapter<AllTypeC
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
         try {
-            if(usercountryselect==1)
+            if(usercountryselect==1 || usercountryselect==3)
             {
                 //for php
+                int size=createCancellationRequestlist.size();
                 if (createCancellationRequestlist.get(position).getBank_name().equalsIgnoreCase("All"))
                 {
                     holder.iconaddmore.setVisibility(View.VISIBLE);
@@ -242,9 +243,14 @@ public class AllTypeCashoutFragmentAdapter extends RecyclerView.Adapter<AllTypeC
         UserResponse userData = AppConfig.getUserData(mContext);
         String countrydata=userData.getUser().country.get(0).country;
         Log.d("country",countrydata);
-        if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines")){
+        if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines"))
+        {
             tv_CountryId.setText("PHP");
             tv_ConMaxTransfer.setText("Maximum of PHP 50,000");
+        }else if(countrydata!=null && countrydata.equalsIgnoreCase("indonesia"))
+        {
+            tv_CountryId.setText("IDR");
+            tv_ConMaxTransfer.setText("Maximum of IDR 50,000");
         }else {
             tv_CountryId.setText("AUD");
             tv_ConMaxTransfer.setText("Maximum of AUD 50,000");
@@ -328,15 +334,19 @@ public class AllTypeCashoutFragmentAdapter extends RecyclerView.Adapter<AllTypeC
         UserResponse userData = AppConfig.getUserData(mContext);
         final String countrydata=userData.getUser().country.get(0).country;
         Log.d("country",countrydata);
-        if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines")){
+         if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines")){
             tv_CountryId.setText("PHP");
+            ivBankLogo.setVisibility(View.VISIBLE);
+            etAccountName.setHint("Enter Account Name");
+        }else if(countrydata!=null && countrydata.equalsIgnoreCase("indonesia")){
+            tv_CountryId.setText("IDR");
             ivBankLogo.setVisibility(View.VISIBLE);
             etAccountName.setHint("Enter Account Name");
         }else {
             ivBankLogo.setVisibility(View.INVISIBLE);
             tv_CountryId.setText("AUD");
             etAccountName.setHint("Enter BSB Name");
-           }
+        }
         tv_ConMaxTransfer.setVisibility(View.GONE);
 
         view.setOnClickListener(new View.OnClickListener() {
@@ -362,10 +372,12 @@ public class AllTypeCashoutFragmentAdapter extends RecyclerView.Adapter<AllTypeC
                     String etAccountNumbervalue = etAccountNumber.getText().toString();
                     if (holder_name.equalsIgnoreCase(""))
                     {
-                        if(countrydata!=null && countrydata.equalsIgnoreCase("Philippines")){
-                            Toast.makeText(mContext, "Please enter Account Name", Toast.LENGTH_SHORT).show();
-                        }else {
+                        if(countrydata!=null && countrydata.equalsIgnoreCase("australia"))
+                        {
                             Toast.makeText(mContext, "Please enter BSB Name", Toast.LENGTH_SHORT).show();
+                        }else
+                        {
+                            Toast.makeText(mContext, "Please enter Account Name", Toast.LENGTH_SHORT).show();
                         }
                     } else if (etAccountNumbervalue.equalsIgnoreCase("")) {
                         Toast.makeText(mContext, "Please enter Account Number", Toast.LENGTH_SHORT).show();

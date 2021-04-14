@@ -91,6 +91,10 @@ public class UserModel {
                             JSONObject sell_transaction_fees=jsonObject.getJSONObject("sell_transaction_fees");
                             String sell_sam_transaction_fees=sell_transaction_fees.getString("sam_transaction_fees");
                             AppConfig.setStringPreferences(App.getInstance(), Constant.sellsam_transaction_fees,""+sell_sam_transaction_fees);
+
+                            JSONObject kpay_transaction_feeobj=jsonObject.getJSONObject("kpay_transaction_fee");
+                            String fee_amount_forKpay=kpay_transaction_feeobj.getString("fee_amount");
+                            AppConfig.setStringPreferences(App.getInstance(), Constant.sellsam_transaction_feeskpay,""+fee_amount_forKpay);
                             //...........
                             AppConfig.setStringPreferences(App.getInstance(), Constant.transaction_fees_mode_eth,""+transaction_fees_mode_eth);
                             AppConfig.setStringPreferences(App.getInstance(), Constant.transaction_fees_mode_usdt,""+transaction_fees_mode_usdt);
@@ -599,8 +603,7 @@ public class UserModel {
                 errordurigApiCalling(activity,t.getMessage());
                 AppConfig.hideLoader();
             }
-        });
-    }
+        }); }
 
     public void sendDataToServer(String estimatedfee, String usereslecteDDKAddress, String typevalue, String selectedddkaddress, String paymentmode, String totalincrypto, String totalusdwithcharge, String con_amount_usd, String userEnterDDk, final Context mContext, String tokenId, final String paymentType, String usd_conversion,
                                  String ddkCoin, String tvCredentialCreditCard, String ddkSecret,

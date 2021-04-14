@@ -2031,7 +2031,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                         }else if(functionname.equalsIgnoreCase("sell"))
                         {
                             String countrydata=userData.getUser().country.get(0).country;
-                            if(countrydata!=null && (countrydata.equalsIgnoreCase("philippines") || countrydata.equalsIgnoreCase("australia")))
+                            if(countrydata!=null && (countrydata.equalsIgnoreCase("philippines") || countrydata.equalsIgnoreCase("australia") || countrydata.equalsIgnoreCase("indonesia")))
                             {
                                 //for now hide below code for show dilaog
                                 //dataPutMethods.showRedeemDialog(mContext,Redeemoptionlist,"sell");

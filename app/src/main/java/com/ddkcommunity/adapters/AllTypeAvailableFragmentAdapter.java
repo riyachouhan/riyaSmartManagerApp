@@ -46,7 +46,7 @@ public class AllTypeAvailableFragmentAdapter extends RecyclerView.Adapter<AllTyp
         try {
             if(!samkoinList.get(position).getBank_name().equals("All"))
             {
-                if (usercountryselect==1)
+                if (usercountryselect==1 || usercountryselect==3)
                 {
                     holder.iv_AllAvailableBankName.setText(samkoinList.get(position).getBank_name());
                     Glide.with(activity).load(SLIDERIMG+ samkoinList.get(position).image).into(holder.iv_AllAvailableBankIcon);

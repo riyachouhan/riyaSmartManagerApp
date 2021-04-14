@@ -203,7 +203,7 @@
             android:textSize="@dimen/_13sdp"
             android:id="@+id/etEmailReceipt"
             android:singleLine="true"
-            android:hint="Send Receipt to"/>
+            android:hint="Enter Email Address"/>
 
     </LinearLayout>
 

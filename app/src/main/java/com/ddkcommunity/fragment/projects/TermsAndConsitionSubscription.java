@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.CheckBox;
@@ -37,6 +38,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static com.ddkcommunity.activities.MainActivity.setTitle;
+import static com.ddkcommunity.fragment.wallet.FragmentCreatePassphrase.TAG;
 import static com.ddkcommunity.utilies.dataPutMethods.ShowApiError;
 
 /**
@@ -63,7 +65,8 @@ public class TermsAndConsitionSubscription extends Fragment implements OnPageCha
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.terms_and_condition, container, false);
-        try {
+        try
+        {
             if(getArguments().getString("activityaction")!=null) {
                 activityaction= getArguments().getString("activityaction");
             }
@@ -73,7 +76,44 @@ public class TermsAndConsitionSubscription extends Fragment implements OnPageCha
             userData = AppConfig.getUserData(getContext());
             //........
             pdfView=view.findViewById(R.id.pdfView);
-            displayFromAsset(SAMPLE_FILE);
+            //displayFromAsset(SAMPLE_FILE);
+
+            //........for url
+            String linkmain;
+            if(!activityaction.equalsIgnoreCase("subscription"))
+            {
+                linkmain="http://157.245.52.206/new_api/api/map-terms-and-conditions";
+            }else
+            {
+                linkmain="http://157.245.52.206/new_api/api/sam-terms-and-conditions";
+            }
+
+            WebView webview =view.findViewById(R.id.webView);
+            WebSettings settings = webview.getSettings();
+            settings.setJavaScriptEnabled(true);
+            webview.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+
+            final ProgressDialog progressBar = ProgressDialog.show(getActivity(), "", "Loading...");
+            webview.setWebViewClient(new WebViewClient() {
+                public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                    Log.i(TAG, "Processing webview url click...");
+                    view.loadUrl(url);
+                    return true;
+                }
+
+                public void onPageFinished(WebView view, String url) {
+                    Log.i(TAG, "Finished loading URL: " +url);
+                    if (progressBar.isShowing()) {
+                        progressBar.dismiss();
+                    }
+                }
+
+                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                    Log.e(TAG, "Error: " + description);
+                    Toast.makeText(getActivity(), "Oh no! " + description, Toast.LENGTH_SHORT).show();
+                }
+            });
+            webview.loadUrl(linkmain);
 
         }catch (Exception e)
         {

@@ -617,6 +617,9 @@ public interface LoadInterface {
     //@POST("apitesting/send-cash-out")
     Call<ResponseBody> sendCashOut(@Query("token") String token, @Body HashMap<String, String> hm);
 
+    @POST("kpay/withdrawl")
+    Call<ResponseBody> sendCashOutSamKoinIndonesia(@Query("token") String token, @Body HashMap<String, String> hm);
+
     @POST("sam-payment/send-cash-out")
     Call<ResponseBody> sendCashOutSamKoin(@Query("token") String token, @Body HashMap<String, String> hm);
 

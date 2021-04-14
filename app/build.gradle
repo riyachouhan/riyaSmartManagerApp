@@ -16,8 +16,8 @@ android
                 applicationId "com.ddkcommunity"
                 minSdkVersion 21
                 targetSdkVersion 29
-                versionCode 46
-                versionName "2.4.17"
+                versionCode 48
+                versionName "2.4.20"
                 multiDexEnabled true
                 testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                 buildConfigField("String", "YOUTUBE_API_KEY", apikeyProperties['YOUTUBE_API_KEY'])
